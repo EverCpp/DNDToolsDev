@@ -1,4 +1,4 @@
-package com.mlf.ddchar.recyclers;
+package com.mlf.dndtools.recyclers;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mlf.ddchar.R;
+import com.mlf.dndtools.R;
 
 public class ItemMoveCallback extends ItemTouchHelper.Callback
 {

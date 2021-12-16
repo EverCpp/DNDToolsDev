@@ -1,4 +1,4 @@
-package com.mlf.ddchar.objects;
+package com.mlf.dndtools.objects;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -6,8 +6,8 @@ import android.net.NetworkInfo;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
 
 @SuppressWarnings("unused")
 public class MyConstant

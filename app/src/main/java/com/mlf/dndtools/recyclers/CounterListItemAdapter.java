@@ -1,4 +1,4 @@
-package com.mlf.ddchar.recyclers;
+package com.mlf.dndtools.recyclers;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -8,13 +8,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import com.enofir.utils.files.EnoFiles;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.objects.MyConstant;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.objects.MyConstant;
 import com.mlf.dndutils.common.Counter;
 import java.util.ArrayList;
 import java.util.Collections;

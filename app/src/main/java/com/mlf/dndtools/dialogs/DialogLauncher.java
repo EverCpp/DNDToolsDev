@@ -1,4 +1,4 @@
-package com.mlf.ddchar.dialogs;
+package com.mlf.dndtools.dialogs;
 
 import android.content.Intent;
 import android.view.View;
@@ -11,7 +11,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import com.mlf.ddchar.R;
+import com.mlf.dndtools.R;
 import com.mlf.dndutils.Monster;
 import com.mlf.dndutils.common.Counter;
 import com.mlf.dndutils.types.EInitiative;
@@ -256,26 +256,6 @@ public class DialogLauncher
         intent.putExtra(InputTextActivity.TAG_NUM, value);
         startInputNumber.launch(intent);
     }
-
-    /*public void InputNumber(String description, int value, int min, int max)
-    {
-        Intent intent = new Intent(activity, InputTextActivity.class);
-        intent.putExtra(InputTextActivity.TAG_DESC, description);
-        intent.putExtra(InputTextActivity.TAG_NUM, value);
-        intent.putExtra(InputTextActivity.TAG_MIN, min);
-        intent.putExtra(InputTextActivity.TAG_MAX, max);
-        startInputNumber.launch(intent);
-    }*/
-
-    /*public void InputNumber(String description, int digitInt, int digitsDecimal, double defNumber)
-    {
-        Intent intent = new Intent(activity, InputNumberActivity.class);
-        intent.putExtra(InputNumberActivity.TAG_MAX_INT_DIGIT, digitInt);
-        intent.putExtra(InputNumberActivity.TAG_MAX_DEC_DIGIT, digitsDecimal);
-        intent.putExtra(InputNumberActivity.TAG_DESCRIPTION, description);
-        intent.putExtra(InputNumberActivity.TAG_INITIAL_VAL, defNumber);
-        startInputNumber.launch(intent);
-    }*/
 
     public void InputMonter()
     {

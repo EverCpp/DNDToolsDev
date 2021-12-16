@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mlf.ddchar">
+    package="com.mlf.dndtools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission
@@ -20,22 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DDChar">
         <activity
-            android:name=".dialogs.ChooseFileActivity"
+            android:name="com.mlf.dndtools.dialogs.ChooseFileActivity"
             android:exported="true" />
         <activity
-            android:name=".dialogs.InputMonsterPlayerActivity"
+            android:name="com.mlf.dndtools.dialogs.InputMonsterPlayerActivity"
             android:exported="true"
             android:theme="@style/Theme.DNDTools" />
         <activity
-            android:name=".dialogs.InputTextActivity"
+            android:name="com.mlf.dndtools.dialogs.InputTextActivity"
             android:exported="true"
             android:theme="@style/Theme.DNDTools" />
         <activity
-            android:name=".dialogs.InputNumberActivity"
-            android:exported="true"
-            android:theme="@style/Theme.DNDTools" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.mlf.dndtools.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

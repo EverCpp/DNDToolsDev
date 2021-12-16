@@ -1,4 +1,4 @@
-package com.mlf.ddchar.recyclers;
+package com.mlf.dndtools.recyclers;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
 import com.mlf.dndutils.common.Item;
 import java.util.ArrayList;
 

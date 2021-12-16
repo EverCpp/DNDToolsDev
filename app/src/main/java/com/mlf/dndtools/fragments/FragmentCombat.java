@@ -1,4 +1,4 @@
-package com.mlf.ddchar.fragments;
+package com.mlf.dndtools.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.recyclers.CombatListItemAdapter;
-import com.mlf.ddchar.recyclers.ItemMoveCallback;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.recyclers.CombatListItemAdapter;
+import com.mlf.dndtools.recyclers.ItemMoveCallback;
 import com.mlf.dndutils.Monster;
 import com.mlf.dndutils.types.EInitiative;
 
@@ -64,14 +64,6 @@ public class FragmentCombat extends Fragment
         ItemTouchHelper touchHelperCounter = new ItemTouchHelper(callbackCounters);
         touchHelperCounter.attachToRecyclerView(recyclerCounters);
 
-        /*viewFragment.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()
-        {
-            @Override
-            public void onGlobalLayout()
-            {
-                viewFragment.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-            }
-        });*/
         return viewFragment;
     }
 

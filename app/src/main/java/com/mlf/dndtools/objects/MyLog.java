@@ -1,4 +1,4 @@
-package com.mlf.ddchar.objects;
+package com.mlf.dndtools.objects;
 
 public class MyLog
 {

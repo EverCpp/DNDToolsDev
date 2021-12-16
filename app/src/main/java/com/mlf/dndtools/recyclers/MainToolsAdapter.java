@@ -1,4 +1,4 @@
-package com.mlf.ddchar.recyclers;
+package com.mlf.dndtools.recyclers;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -6,11 +6,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.fragments.FragmentBasics;
-import com.mlf.ddchar.fragments.FragmentCharacter;
-import com.mlf.ddchar.fragments.FragmentCombat;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.fragments.FragmentBasics;
+import com.mlf.dndtools.fragments.FragmentCharacter;
+import com.mlf.dndtools.fragments.FragmentCombat;
 
 public class MainToolsAdapter extends FragmentStateAdapter
 {

@@ -1,4 +1,4 @@
-package com.mlf.ddchar.interfaces;
+package com.mlf.dndtools.interfaces;
 
 public interface OnRecyclerChangeDataListener
 {

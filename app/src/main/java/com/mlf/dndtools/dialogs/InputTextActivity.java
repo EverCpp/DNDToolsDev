@@ -1,4 +1,4 @@
-package com.mlf.ddchar.dialogs;
+package com.mlf.dndtools.dialogs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.objects.MyConstant;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.objects.MyConstant;
 import com.mlf.dndutils.common.Counter;
 
 import java.util.Locale;

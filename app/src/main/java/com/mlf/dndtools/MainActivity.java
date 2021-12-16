@@ -1,4 +1,4 @@
-package com.mlf.ddchar;
+package com.mlf.dndtools;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,10 @@ import android.os.CountDownTimer;
 import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.objects.MyConstant;
-import com.mlf.ddchar.objects.MyLog;
-import com.mlf.ddchar.recyclers.MainToolsAdapter;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.recyclers.MainToolsAdapter;
 
 @SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity

@@ -1,8 +1,8 @@
-package com.mlf.ddchar.dialogs;
+package com.mlf.dndtools.dialogs;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.mlf.ddchar.R;
+import com.mlf.dndtools.R;
 
 public class ChooseFileActivity extends AppCompatActivity
 {

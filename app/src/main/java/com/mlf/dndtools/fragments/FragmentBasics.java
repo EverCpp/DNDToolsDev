@@ -1,4 +1,4 @@
-package com.mlf.ddchar.fragments;
+package com.mlf.dndtools.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,16 +16,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.objects.MyLog;
-import com.mlf.ddchar.recyclers.CounterListItemAdapter;
-import com.mlf.ddchar.recyclers.InventoryItemAdapter;
-import com.mlf.ddchar.recyclers.ItemMoveCallback;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.recyclers.CounterListItemAdapter;
+import com.mlf.dndtools.recyclers.InventoryItemAdapter;
+import com.mlf.dndtools.recyclers.ItemMoveCallback;
 import com.mlf.dndutils.common.Counter;
 import com.mlf.dndutils.common.Item;
-
-import java.util.ArrayList;
 
 @SuppressWarnings({"UnusedReturnValue", "unused"})
 public class FragmentBasics extends Fragment

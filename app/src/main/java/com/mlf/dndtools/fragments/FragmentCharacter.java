@@ -1,4 +1,4 @@
-package com.mlf.ddchar.fragments;
+package com.mlf.dndtools.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,12 +14,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.dialogs.DialogLauncher;
-import com.mlf.ddchar.objects.MyConstant;
-import com.mlf.ddchar.objects.MyLog;
-import com.mlf.ddchar.recyclers.CharAbilityItemAdapter;
-import com.mlf.ddchar.recyclers.ItemMoveCallback;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.recyclers.CharAbilityItemAdapter;
 import com.mlf.dndutils.Char;
 import com.mlf.dndutils.types.EAlignment;
 import com.mlf.dndutils.types.EClass;

@@ -1,4 +1,4 @@
-package com.mlf.ddchar.dialogs;
+package com.mlf.dndtools.dialogs;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.mlf.ddchar.R;
-import com.mlf.ddchar.objects.MyConstant;
+import com.mlf.dndtools.R;
+import com.mlf.dndtools.objects.MyConstant;
 import com.mlf.dndutils.CombatManager;
 import com.mlf.dndutils.types.EInitiative;
 
@@ -125,10 +125,12 @@ public class InputMonsterPlayerActivity extends AppCompatActivity
                     if(value > 1)
                     {
                         textNamePref.setText(getString(R.string.input_monster_prefix));
+                        spinnerInitType.setSelection(initypeStrings.indexOf(getString(R.string.input_monster_init_auto)));
                     }
                     else
                     {
                         textNamePref.setText(getString(R.string.input_monster_name));
+                        spinnerInitType.setSelection(initypeStrings.indexOf(getString(R.string.input_monster_init_manual)));
                     }
                 }
             }
