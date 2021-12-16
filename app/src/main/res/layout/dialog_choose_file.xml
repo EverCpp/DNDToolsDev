@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chooseFileLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg01_wood"
+    tools:context=".dialogs.ChooseFileActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/chooseFileTextName"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialog_margin"
+        android:layout_marginTop="@dimen/dialog_margin"
+        android:layout_marginEnd="@dimen/dialog_margin"
+        android:text="@string/choose_file_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/chooseFileEditName"
+        style="@style/content_square_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/control_margin_normal"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintBottom_toBottomOf="@+id/chooseFileButUp"
+        app:layout_constraintEnd_toStartOf="@+id/chooseFileButUp"
+        app:layout_constraintStart_toStartOf="@+id/chooseFileTextName"
+        app:layout_constraintTop_toTopOf="@+id/chooseFileButUp"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/chooseFileButUp"
+        style="@style/but_gray_style"
+        android:layout_width="@dimen/choose_file_item_height"
+        android:layout_height="@dimen/choose_file_item_height"
+        android:layout_marginTop="@dimen/control_margin_normal"
+        android:contentDescription="@string/choose_file_up"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_explore_up"
+        app:layout_constraintEnd_toEndOf="@+id/chooseFileTextName"
+        app:layout_constraintTop_toBottomOf="@+id/chooseFileTextName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/control_margin_normal"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        app:layout_constraintBottom_toTopOf="@+id/chooseFileButOk"
+        app:layout_constraintEnd_toEndOf="@+id/chooseFileButUp"
+        app:layout_constraintStart_toStartOf="@+id/chooseFileEditName"
+        app:layout_constraintTop_toBottomOf="@+id/chooseFileButUp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chooseFileButOk"
+        style="@style/but_gray_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:text="@string/dialog_but_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chooseFileButCancel"
+        style="@style/but_gray_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_but_cancel"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toTopOf="@+id/chooseFileButOk" />
+</androidx.constraintlayout.widget.ConstraintLayout>

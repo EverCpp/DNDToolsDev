@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showDialogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg01_wood"
+    android:padding="@dimen/dialog_margin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/showDialogIcon"
+        android:layout_width="@dimen/dialog_icon"
+        android:layout_height="@dimen/dialog_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dialog_info"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showDialogButCancel"
+        style="@style/but_red_style"
+        android:layout_width="0dp"
+        android:text="@string/dialog_but_cancel"
+        app:layout_constraintStart_toStartOf="@+id/showDialogIcon"
+        app:layout_constraintTop_toTopOf="@+id/showDialogButOk"
+        tools:ignore="TextContrastCheck"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showDialogButOk"
+        style="@style/but_green_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/but_margin"
+        android:text="@string/dialog_but_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/showDialogTextMessage"
+        app:layout_constraintTop_toBottomOf="@+id/showDialogIcon"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/showDialogTextTitle"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/but_margin"
+        android:gravity="center|start"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showDialogIcon"
+        app:layout_constraintTop_toTopOf="@+id/showDialogIcon"
+        tools:ignore="TextContrastCheck"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/showDialogTextMessage"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        app:layout_constraintBottom_toBottomOf="@+id/showDialogIcon"
+        app:layout_constraintEnd_toEndOf="@+id/showDialogTextTitle"
+        app:layout_constraintStart_toStartOf="@+id/showDialogTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/showDialogTextTitle"
+        tools:ignore="TextContrastCheck"
+        tools:text="Mensaje" />
+</androidx.constraintlayout.widget.ConstraintLayout>

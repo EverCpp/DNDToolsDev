@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chooseFileItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/choose_file_item_height"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/shape_content_square"
+    android:padding="3dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chooseFileItemImageIcon"
+        android:layout_width="@dimen/choose_file_item_height"
+        android:layout_height="0dp"
+        android:contentDescription="@string/choose_file_desc_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/chooseFileItemLayout"
+        app:layout_constraintStart_toStartOf="@+id/chooseFileItemLayout"
+        app:layout_constraintTop_toTopOf="@+id/chooseFileItemLayout"
+        app:srcCompat="@drawable/ic_explore_file" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/chooseFileItemTextName"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chooseFileItemLayout"
+        app:layout_constraintEnd_toEndOf="@+id/chooseFileItemLayout"
+        app:layout_constraintStart_toEndOf="@+id/chooseFileItemImageIcon"
+        app:layout_constraintTop_toTopOf="@+id/chooseFileItemLayout"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
+        tools:text="Nombre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inputMonsterLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg01_wood"
+    android:padding="@dimen/dialog_margin"
+    tools:context=".dialogs.InputTextActivity">
+
+    <LinearLayout
+        android:id="@+id/inputMonsterLayoutNameCountText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inputMonsterTextNamePref"
+            style="@style/label_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/control_margin_normal"
+            android:layout_weight="4"
+            android:text="@string/input_monster_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inputMonsterTextCount"
+            style="@style/label_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:layout_weight="1"
+            android:text="@string/input_monster_count" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputMonsterLayoutNameCountEdit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_height"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterLayoutNameCountText">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputMonsterEditName"
+            style="@style/content_square_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/control_margin_normal"
+            android:layout_weight="4"
+            android:ems="10"
+            android:inputType="textCapSentences"
+            android:nextFocusDown="@id/inputMonsterEditCount"
+            android:textSize="24sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputMonsterEditCount"
+            style="@style/content_square_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/inputMonsterSpinnerInitType"
+            android:selectAllOnFocus="true"
+            android:text="@string/gral_one"
+            android:textAlignment="viewEnd"
+            android:textSize="24sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputMonsterLayoutInitiativeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/control_margin_normal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterLayoutNameCountEdit">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inputMonsterTextInitiative"
+            style="@style/label_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/control_margin_normal"
+            android:layout_weight="4"
+            android:text="@string/input_monster_initiative" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/inputMonsterTextBonusValue"
+            style="@style/label_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:layout_weight="1"
+            android:text="@string/input_monster_init_text_bonus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputMonsterLayoutInitiativeValues"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_height"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterLayoutInitiativeText">
+
+        <Spinner
+            android:id="@+id/inputMonsterSpinnerInitType"
+            style="@style/content_square_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/control_margin_normal"
+            android:layout_weight="4"
+            android:nextFocusDown="@id/inputMonsterEditBonusValue"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/inputMonsterEditBonusValue"
+            style="@style/content_square_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberSigned|number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/inputMonsterEditHitPoints"
+            android:selectAllOnFocus="true"
+            android:text="@string/gral_zero"
+            android:textAlignment="viewEnd"
+            android:textSize="24sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputMonsterEditHitPoints"
+        style="@style/content_square_style"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_height"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="8"
+        android:nextFocusDown="@id/inputMonsterButOk"
+        android:selectAllOnFocus="true"
+        android:text="@string/input_monster_def_hitpoints"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputMonsterHitPoints"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterHitPoints"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/inputMonsterHitPoints"
+        style="@style/label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/control_margin_normal"
+        android:layout_weight="1"
+        android:text="@string/input_monster_hitpoints"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterLayoutInitiativeValues" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/inputMonsterButOk"
+        style="@style/but_green_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_but_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputMonsterButCancel"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/inputMonsterButCancel"
+        style="@style/but_red_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/but_margin"
+        android:text="@string/dialog_but_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMonsterEditHitPoints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

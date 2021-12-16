@@ -1,0 +1,85 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionBarSize">@dimen/actionbar_height</item>
+        <item name="actionBarSize">@dimen/actionbar_height</item>
+    </style>
+
+    <style name="but_base_style">
+        <item name="android:textSize">@dimen/but_font_size</item>
+        <item name="android:paddingStart">@dimen/but_pad_lr</item>
+        <item name="android:paddingEnd">@dimen/but_pad_lr</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="but_red_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_red_text</item>
+        <item name="android:background">@drawable/shape_button_red</item>
+    </style>
+
+    <style name="but_gray_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_red_text</item>
+        <item name="android:background">@drawable/shape_button_gray</item>
+    </style>
+
+    <style name="but_green_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_green_text</item>
+        <item name="android:background">@drawable/shape_button_green</item>
+    </style>
+
+    <style name="but_blue_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_blue_text</item>
+        <item name="android:background">@drawable/shape_button_blue</item>
+    </style>
+
+    <style name="but_yellow_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_yellow_text</item>
+        <item name="android:background">@drawable/shape_button_yellow</item>
+    </style>
+
+    <style name="but_flat_red_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_red_text</item>
+        <item name="android:background">@drawable/shape_button_red</item>
+    </style>
+
+    <style name="but_flat_green_style" parent="but_base_style">
+        <item name="android:textColor">@color/but_green_text</item>
+        <item name="android:background">@drawable/shape_button_green</item>
+    </style>
+
+    <style name="label_style">
+        <item name="android:textSize">@dimen/gral_font_size_normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/content_text</item>
+    </style>
+
+    <style name="content_square_style">
+        <item name="android:textSize">@dimen/edit_font_size</item>
+        <item name="android:textColor">@color/content_text</item>
+        <item name="android:paddingStart">@dimen/content_pad_lr</item>
+        <item name="android:paddingEnd">@dimen/content_pad_lr</item>
+        <item name="android:paddingTop">@dimen/content_pad_tb</item>
+        <item name="android:paddingBottom">@dimen/content_pad_tb</item>
+        <item name="android:background">@drawable/shape_content_square</item>
+        <item name="android:textColorHighlight">@color/gray_normal</item>
+        <item name="android:textColorHint">@color/gray_normal</item>
+        <item name="android:textColorLink">@color/gray_dark</item>
+        <item name="android:textCursorDrawable">@drawable/shape_edit_cursor</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:textSize">@dimen/edit_font_size</item>
+        <item name="android:textColor">@color/content_text</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+    </style>
+
+</resources>
+

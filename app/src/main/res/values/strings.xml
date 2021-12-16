@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">DNDToolsDev</string>
+
+    <string name="gral_zero">0</string>
+    <string name="gral_one">1</string>
+    <string name="gral_empty" />
+    <string name="toast_exit">Presione de nuevo para salir</string>
+    <string name="gral_del_x">X</string>
+    <string name="gral_add">Agregar</string>
+    <string name="gral_pluss">+</string>
+
+    <!-- Dialog general -->
+    <string name="dialog_but_cancel">Cancelar</string>
+    <string name="dialog_but_ok">Aceptar</string>
+    <string name="dialog_but_exit">Salir</string>
+    <string name="dialog_but_finish">Terminar</string>
+
+    <!-- Dialog -->
+    <string name="dialog_remove_title">Eliminar</string>
+    <string name="dialog_remove_msg">¿Eliminar \"%s\"?</string>
+    <string name="dialog_remove_combat">¿Eliminar datos del combate actual?</string>
+    <string name="dialog_edit_desc">Descripción</string>
+    <string name="dialog_edit_name">Nombre</string>
+    <string name="dialog_edit_val">Valor de \"%s\"</string>
+    <string name="dialog_edit_hitpoints">Puntos de golpe de \"%s\"</string>
+    <string name="dialog_edit_add">Agreagar a \"%s\"</string>
+    <string name="dialog_edit_suppress">Quitar a \"%s\"</string>
+    <!-- Tabs -->
+    <string name="tab_basics">Básico</string>
+    <string name="tab_combat">Combate</string>
+    <string name="tab_character">Personaje</string>
+
+    <!-- Errors -->
+    <string name="err_gral_title">Error</string>
+    <string name="err_gral_intern">Error interno</string>
+    <string name="err_gral_data_msg">Verifique los datos y reintente</string>
+    <string name="err_no_connection_msg">Verifique su conexión y reintente</string>
+    <string name="err_no_connection_title">Error de conexión</string>
+
+    <!-- Input monster -->
+    <string name="input_monster_name">Nombre</string>
+    <string name="input_monster_prefix">Prefijo</string>
+    <string name="input_monster_moster">Monstruo</string>
+    <string name="input_monster_count">Cant.</string>
+    <string name="input_monster_initiative">Tipo de iniciativa</string>
+    <string name="input_monster_init_manual">Manual</string>
+    <string name="input_monster_init_auto">Auto</string>
+    <string name="input_monster_init_none">Ninguna</string>
+    <string name="input_monster_init_text_value">Valor</string>
+    <string name="input_monster_init_text_bonus">Bonif.</string>
+    <string name="input_monster_hitpoints">Puntos de golpe</string>
+    <string name="input_monster_def_hitpoints">20</string>
+
+    <!-- Input product manual -->
+    <string name="input_text_title">Ingreso de texto</string>
+    <string name="input_text_view_desc_def">Descripción</string>
+    <string name="input_text_edit_desc_def">Texto</string>
+
+    <string name="counters">Contadores</string>
+    <string name="counter_plus1">+</string>
+    <string name="counter_less1">-</string>
+
+    <string name="inventory">Inventario</string>
+    <string name="main_add_item">Agregar Item</string>
+    <string name="main_add_counter">Agregar Contador</string>
+
+    <!-- Input number-->
+    <string name="input_key_00">00</string>
+    <string name="input_key_0">0</string>
+    <string name="input_key_1">1</string>
+    <string name="input_key_2">2</string>
+    <string name="input_key_3">3</string>
+    <string name="input_key_4">4</string>
+    <string name="input_key_5">5</string>
+    <string name="input_key_6">6</string>
+    <string name="input_key_7">7</string>
+    <string name="input_key_8">8</string>
+    <string name="input_key_9">9</string>
+    <string name="input_key_dot">.</string>
+    <string name="input_key_del">Del</string>
+
+    <!-- Choose file-->
+    <string name="choose_file_name">Nombre del archivo</string>
+    <string name="choose_file_desc_icon">Icon file or directory</string>
+    <string name="choose_file_up">Arriba</string>
+
+    <!-- Errores -->
+    <string name="check_err_range">El valor debe estar entre %d y %d</string>
+    <string name="check_err_empty">No puede estar vacío</string>
+    <string name="check_err_num_int">Debe ingresar un número entero positivo</string>
+    <string name="check_err_num_signed">Debe ingresar un número entero</string>
+    <string name="check_err_alnum">Debe ingresar sólo número y letras sin tilde</string>
+    <string name="check_err_text">No pueden usar letras con tilde o caracteres especiales</string>
+    <string name="check_err_text_simple">Use números, puntos, guiones y letras (sin tilde o caracteres especiales)</string>
+    <string name="check_err_email">Formato de email no válido</string>
+    <string name="check_err_date">Formato de fecha no válido</string>
+    <string name="check_err_ip">Formato de IP no válido</string>
+    <string name="check_err_phone">Debe ingresar sólo número y guiones</string>
+    <string name="check_err_cuit_dni">Formato de documento no válido</string>
+    <string name="check_err_zipcode">Debe ingresar sólo número y letras sin tilde</string>
+    <string name="check_err_biz">@string/check_err_text</string>
+    <string name="check_err_pass">@string/check_err_text</string>
+    <string name="check_err_user">@string/check_err_text_simple</string>
+
+    <!-- Character -->
+    <string name="ability_strength">Fuerza</string>
+    <string name="ability_dextery">Destreza</string>
+    <string name="ability_constitution">Constitución</string>
+    <string name="ability_intelligence">Inteligencia</string>
+    <string name="ability_wisdom">Sabiduría</string>
+    <string name="ability_charisma">Carisma</string>
+
+    <string name="ability_strength_short">Fuerza</string>
+    <string name="ability_dextery_short">Dest.</string>
+    <string name="ability_constitution_short">Const.</string>
+    <string name="ability_intelligence_short">Intel.</string>
+    <string name="ability_wisdom_short">Sabid.</string>
+    <string name="ability_charisma_short">Carisma</string>
+
+    <string name="char_name">Nombre</string>
+    <string name="char_background">Trasfondo</string>
+    <string name="char_level">Nivel</string>
+    <string name="def_char_name">Nombre</string>
+    <string name="def_char_background">Trasfondo</string>
+    <string name="def_char_alignment">Alineamiento</string>
+    <string name="def_char_level">3</string>
+
+    <!-- Razas y clases -->
+    <string name="race_dragonborn">Dracónico</string>
+    <string name="race_dwarf">Enano</string>
+    <string name="race_elf">Elfo</string>
+    <string name="race_gnome">Gnomo</string>
+    <string name="race_halfelf">Semielfo</string>
+    <string name="race_halfling">Mediano</string>
+    <string name="race_halforc">Semiorco</string>
+    <string name="race_human">Humano</string>
+    <string name="race_tiefling">Tiflin</string>
+
+    <string name="class_barbarian">Bárbaro</string>
+    <string name="class_bard">Bardo</string>
+    <string name="class_cleric">Clérigo</string>
+    <string name="class_druid">Druida</string>
+    <string name="class_fighter">Guerrero</string>
+    <string name="class_monk">Monje</string>
+    <string name="class_paladin">Paladín</string>
+    <string name="class_ranger">Explorador</string>
+    <string name="class_rouge">Pícaro</string>
+    <string name="class_sorcerer">Hechicero</string>
+    <string name="class_warlock">Brujo</string>
+    <string name="class_wizard">Mago</string>
+
+    <!-- Alignment -->
+    <string name="align_unaligned">No alineado</string>
+    <string name="align_lawful_good">Legal bueno</string>
+    <string name="align_neutral_good">Neutral bueno</string>
+    <string name="align_chaotic_good">Caótico bueno</string>
+    <string name="align_lawful_neutral">Legal neutral</string>
+    <string name="align_true_neutral"> Neutral real</string>
+    <string name="align_chaotic_neutral">Caótico neutral</string>
+    <string name="align_lawful_evil">Legal malo</string>
+    <string name="align_neutral_evil">Neutral malo</string>
+    <string name="align_chaotic_evil">Caótico malo</string>
+
+</resources>

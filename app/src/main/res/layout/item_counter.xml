@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/counterItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_counter_height"
+    android:layout_margin="1dp"
+    android:background="@drawable/shape_content_square"
+    android:padding="3dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/counterItemTextName"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:inputType="textNoSuggestions|textCapSentences"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/counterItemLayout"
+        app:layout_constraintEnd_toStartOf="@+id/counterItemButDown"
+        app:layout_constraintStart_toStartOf="@+id/counterItemLayout"
+        app:layout_constraintTop_toTopOf="@+id/counterItemLayout"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:text="Nombre" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/counterItemTextValue"
+        style="@style/content_square_style"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:minWidth="@dimen/but_updown_width"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/counterItemButUp"
+        app:layout_constraintEnd_toStartOf="@+id/counterItemButUp"
+        app:layout_constraintTop_toTopOf="@+id/counterItemButUp"
+        tools:ignore="TextContrastCheck"
+        tools:text="1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counterItemButUp"
+        style="@style/but_gray_style"
+        android:layout_width="@dimen/but_updown_width"
+        android:layout_height="0dp"
+        android:text="@string/counter_plus1"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/counterItemTextName"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counterItemButDown"
+        style="@style/but_gray_style"
+        android:layout_width="@dimen/but_updown_width"
+        android:layout_height="0dp"
+        android:text="@string/counter_less1"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/counterItemTextValue"
+        app:layout_constraintTop_toTopOf="@+id/counterItemButUp"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

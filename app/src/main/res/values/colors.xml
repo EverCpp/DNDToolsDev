@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/brown_normal</color>
+    <color name="colorPrimaryDark">@color/brown_dark</color>
+    <color name="colorAccent">@color/brown_very_dark</color>
+
+    <!-- Grays -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_very_light">#FAFAFA</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_normal">#C0C0C0</color>
+    <color name="gray_dark">#606060</color>
+    <color name="black">#000000</color>
+    <color name="none">#00000000</color>
+
+    <!-- General colors -->
+    <color name="red_very_dark">#590000</color>
+    <color name="red_dark">#790000</color>
+    <color name="red_normal">#910000</color>
+    <color name="red_light">#b40000</color>
+
+    <color name="green_very_dark">#002100</color>
+    <color name="green_dark">#003500</color>
+    <color name="green_normal">#167a0d</color>
+    <color name="green_light">#1b940f</color>
+
+    <color name="blue_very_dark">#000017</color>
+    <color name="blue_dark">#00004e</color>
+    <color name="blue_normal">#000070</color>
+    <color name="blue_light">#00009d</color>
+
+    <color name="yellow_very_dark">#333300</color>
+    <color name="yellow_dark">#666600</color>
+    <color name="yellow_normal">#999900</color>
+    <color name="yellow_light">#cccc00</color>
+    <color name="yellow_very_light">#eeee00</color>
+
+    <color name="brown_very_dark">#261c14</color>
+    <color name="brown_dark">#402e22</color>
+    <color name="brown_normal">#634835</color>
+    <color name="brown_light">#7a5942</color>
+    <color name="brown_very_light">#996f52</color>
+
+    <color name="blue_opaque_dark">#262699</color>
+    <color name="blue_opaque_normal">#3535d4</color>
+    <color name="blue_opaque_light">#6a6ad4</color>
+    <color name="lightblue_dark">#709ccc</color>
+    <color name="lightblue_normal">#aacdf3</color>
+    <color name="lightblue_light">#c2daf3</color>
+
+    <!-- Controles -->
+
+    <!-- Dialog/Fragment  General -->
+    <color name="actionbar_bg">@color/gray_light</color>
+    <color name="dialog_bg">@color/gray_light</color>
+
+    <!-- Buttons -->
+    <color name="but_disable_bg">@color/gray_normal</color>
+    <color name="but_disable_stroke">@color/gray_light</color>
+    <color name="but_disable_text">@color/white</color>
+
+    <color name="but_gray_normal_bg">#3e3832</color>
+    <color name="but_gray_normal_text">@color/yellow_light</color>
+    <color name="but_gray_normal_stroke">#140d03</color>
+    <color name="but_gray_press_bg">#2b2723</color>
+    <color name="but_gray_press_text">@color/yellow_light</color>
+    <color name="but_gray_press_stroke">#140d03</color>
+
+    <color name="but_red_normal_bg">@color/red_normal</color>
+    <color name="but_red_normal_text">@color/yellow_light</color>
+    <color name="but_red_normal_stroke">@color/red_dark</color>
+    <color name="but_red_press_bg">@color/red_dark</color>
+    <color name="but_red_press_text">@color/yellow_light</color>
+    <color name="but_red_press_stroke">@color/red_very_dark</color>
+
+    <color name="but_green_normal_bg">@color/green_normal</color>
+    <color name="but_green_normal_text">@color/yellow_light</color>
+    <color name="but_green_normal_stroke">@color/green_dark</color>
+    <color name="but_green_press_bg">@color/green_dark</color>
+    <color name="but_green_press_text">@color/yellow_light</color>
+    <color name="but_green_press_stroke">@color/green_very_dark</color>
+
+    <color name="but_blue_normal_bg">@color/blue_normal</color>
+    <color name="but_blue_normal_text">@color/yellow_light</color>
+    <color name="but_blue_normal_stroke">@color/blue_dark</color>
+    <color name="but_blue_press_bg">@color/blue_dark</color>
+    <color name="but_blue_press_text">@color/yellow_light</color>
+    <color name="but_blue_press_stroke">@color/blue_very_dark</color>
+
+    <color name="but_yellow_normal_bg">@color/yellow_normal</color>
+    <color name="but_yellow_normal_text">@color/yellow_light</color>
+    <color name="but_yellow_normal_stroke">@color/yellow_dark</color>
+    <color name="but_yellow_press_bg">@color/yellow_dark</color>
+    <color name="but_yellow_press_text">@color/yellow_light</color>
+    <color name="but_yellow_press_stroke">@color/yellow_very_dark</color>
+
+    <!-- Toolbar top -->
+    <color name="toolbar_bg">@color/white</color>
+    <color name="toolbar_but_normal_bg">@color/none</color>
+    <color name="toolbar_but_press_bg">@color/gray_normal</color>
+
+    <!-- Edits -->
+    <color name="edit_normal_bg">@color/black</color>
+    <color name="edit_normal_stroke">@color/gray_dark</color>
+    <color name="edit_focus_bg">@color/black</color>
+    <color name="edit_focus_stroke">@color/gray_dark</color>
+    <color name="edit_disabled_bg">@color/black</color>
+    <color name="edit_disabled_stroke">@color/gray_dark</color>
+
+    <!-- Genereal content -->
+    <color name="content_stroke_enabled">#a58331</color>
+    <color name="content_stroke_disabled">@color/gray_normal</color>
+    <!--<color name="content_stroke_focus">#cca23d</color>-->
+    <color name="content_stroke_focus">@color/yellow_light</color>
+    <color name="content_bg_enabled">#1a1f21</color>
+    <color name="content_bg_disabled">#1a1f21</color>
+    <color name="content_bg_focus">#1a1f21</color>
+    <color name="content_text_enabled">@color/white</color>
+    <color name="content_text_disabled">@color/gray_normal</color>
+    <color name="content_text_focus">@color/white</color>
+
+    <!-- Items inventario -->
+    <color name="item_inv_normal_bg">@color/content_bg_enabled</color>
+    <color name="item_inv_normal_stroke">@color/content_stroke_enabled</color>
+    <color name="item_inv_normal_text">@color/white</color>
+    <color name="item_inv_focus_bg">@color/content_bg_enabled</color>
+    <color name="item_inv_focus_stroke">@color/content_stroke_enabled</color>
+    <color name="item_inv_focus_text">@color/white</color>
+
+    <!-- Items counter -->
+    <color name="item_counter_normal_bg">@color/content_bg_enabled</color>
+    <color name="item_counter_normal_stroke">@color/content_stroke_enabled</color>
+    <color name="item_counter_normal_text">@color/white</color>
+    <color name="item_counter_focus_bg">@color/content_bg_enabled</color>
+    <color name="item_counter_focus_stroke">@color/content_stroke_enabled</color>
+    <color name="item_counter_focus_text">@color/white</color>
+
+    <!-- TextViews -->
+    <color name="text_white_normal_text">@color/white</color>
+    <color name="text_white_disabled_text">@color/gray_normal</color>
+    <color name="text_black_normal_text">@color/black</color>
+    <color name="text_black_disabled_text">@color/gray_normal</color>
+
+    <!-- RadioButtons -->
+    <color name="radio_button_checked">@color/black</color>
+    <color name="radio_button_disable">@color/gray_normal</color>
+    <color name="radio_button_normal">@color/gray_dark</color>
+
+    <!-- ProgressBar -->
+    <color name="progress_bar_color">@color/green_normal</color>
+
+    <!-- Recyclers -->
+    <color name="recycler_normal_bg">@color/white</color>
+    <color name="recycler_normal_stroke">@color/gray_normal</color>
+    <color name="recycler_disabled_bg">@color/gray_normal</color>
+    <color name="recycler_disabled_stroke">@color/gray_dark</color>
+
+    <!-- List General -->
+    <color name="list_item_light_bg">@color/white</color>
+    <color name="list_item_light_text">@color/black</color>
+    <color name="list_item_dark_bg">#DDDDDD</color>
+    <color name="list_item_dark_text">@color/black</color>
+    <color name="list_item_mask_bg">#4841CB</color>
+    <color name="list_item_mask_text">@color/white</color>
+
+    <!-- Colores de la grilla -->
+    <color name="grid_recycler_bg">@color/gray_light</color>
+    <color name="grid_item_light_normal_bg">#9893b3</color>
+    <color name="grid_item_light_normal_stroke">@color/grid_recycler_bg</color>
+    <color name="grid_item_light_normal_text">@color/white</color>
+    <color name="grid_item_light_press_bg">#7873bf</color>
+    <color name="grid_item_light_press_stroke">@color/grid_recycler_bg</color>
+    <color name="grid_item_light_press_text">#c1c0e7</color>
+
+    <color name="grid_item_dark_normal_bg">#668ab6</color>
+    <color name="grid_item_dark_normal_stroke">@color/grid_recycler_bg</color>
+    <color name="grid_item_dark_normal_text">@color/white</color>
+    <color name="grid_item_dark_press_bg">#596dc1</color>
+    <color name="grid_item_dark_press_stroke">@color/grid_recycler_bg</color>
+    <color name="grid_item_dark_press_text">#c1c0e7</color>
+
+    <!-- Colores de la lista de compras -->
+    <color name="buylist_item_light_normal_bg_stroke">@color/list_item_light_bg</color>
+    <color name="buylist_item_light_normal_text">@color/list_item_light_text</color>
+    <color name="buylist_item_light_press_bg">#c1c0e7</color>
+    <color name="buylist_item_light_press_stroke_text">@color/list_item_mask_bg</color>
+    <color name="buylist_item_dark_normal_bg_stroke">@color/lightblue_light</color>
+    <color name="buylist_item_dark_normal_text">@color/list_item_dark_text</color>
+    <color name="buylist_item_dark_press_bg">#a8a7d4</color>
+    <color name="buylist_item_dark_press_stroke_text">@color/list_item_mask_bg</color>
+
+    <!-- Colores de la lista de búsqueda -->
+    <color name="search_item_light_normal_bg_stroke">@color/list_item_light_bg</color>
+    <color name="search_item_light_normal_text">@color/list_item_light_text</color>
+    <color name="search_item_light_press_bg">#c1c0e7</color>
+    <color name="search_item_light_press_stroke_text">@color/list_item_mask_bg</color>
+    <color name="search_item_dark_normal_bg_stroke">@color/lightblue_light</color>
+    <color name="search_item_dark_normal_text">@color/list_item_dark_text</color>
+    <color name="search_item_dark_press_bg">#a8a7d4</color>
+    <color name="search_item_dark_press_stroke_text">@color/list_item_mask_bg</color>
+
+</resources>

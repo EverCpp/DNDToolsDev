@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/combatFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg02_rock1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/combatConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/combatRecyclerFighters"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/combatToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/combatToolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_height"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/combatConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/combatConstraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/combatConstraintLayout" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/combatButAdd"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/dialog_but_width"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:contentDescription="@string/main_add_counter"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_combat_add"
+            app:layout_constraintBottom_toBottomOf="@+id/combatToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/combatToolbar"
+            tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/combatButClear"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/dialog_but_width"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:contentDescription="@string/main_add_counter"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_combat_clear_all"
+            app:layout_constraintBottom_toBottomOf="@+id/combatToolbar"
+            app:layout_constraintEnd_toStartOf="@+id/combatButAdd"
+            app:layout_constraintTop_toTopOf="@+id/combatToolbar"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

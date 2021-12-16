@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/charFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg03_papirus">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/charLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/charLayoutBaseHistory"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/charTextLevel"
+            app:layout_constraintEnd_toStartOf="@+id/charTextLevel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/charLayoutBase"
+                style="@style/content_square_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/charTextName"
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/def_char_name"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/charSpinnerRace"
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/charSpinnerClass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/charTextName"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/charSpinnerClass"
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/charTextName"
+                    app:layout_constraintStart_toEndOf="@+id/charSpinnerRace"
+                    app:layout_constraintTop_toBottomOf="@+id/charTextName"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/charLayoutHistory"
+                style="@style/content_square_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/charTextBackground"
+                    style="@style/label_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/def_char_background" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/charSpinnerAlignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/charTextLevel"
+            style="@style/content_square_style"
+            android:layout_width="@dimen/char_level_width"
+            android:layout_height="@dimen/char_level_height"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/shape_content_square"
+            android:gravity="center"
+            android:text="@string/def_char_level"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/charRecyclerAbilities"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/char_abilities_height"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charTextLevel">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/charToolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_height"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/charLayoutMain"
+            app:layout_constraintEnd_toEndOf="@+id/charLayoutMain"
+            app:layout_constraintStart_toStartOf="@+id/charLayoutMain" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/charButBag"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/dialog_but_width"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:contentDescription="@string/main_add_counter"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_char_bag"
+            app:layout_constraintBottom_toBottomOf="@+id/charToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/charToolbar"
+            tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

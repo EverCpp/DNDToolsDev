@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gral fonts -->
+    <dimen name="gral_font_size_large">30sp</dimen>
+    <dimen name="gral_font_size_normal">18sp</dimen>
+    <dimen name="gral_font_size_small">14sp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_margin">16dp</dimen>
+    <dimen name="dialog_but_height">48dp</dimen>
+    <dimen name="dialog_but_width">48dp</dimen>
+    <dimen name="dialog_icon">80dp</dimen>
+    <dimen name="dialog_divider">15dp</dimen>
+
+    <!-- Controls margin -->
+    <dimen name="control_margin_normal">4dp</dimen>
+    <dimen name="control_margin_large">8dp</dimen>
+    <dimen name="but_margin">16dp</dimen>
+    <dimen name="but_margin_half">8dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="but_font_size">@dimen/gral_font_size_normal</dimen>
+    <dimen name="but_pad_lr">5dp</dimen>
+    <dimen name="but_corner_radius">5dp</dimen>
+    <dimen name="but_stroke">2dp</dimen>
+    <dimen name="but_updown_width">42dp</dimen>
+
+    <!-- General content -->
+    <dimen name="content_stroke">2dp</dimen>
+    <dimen name="content_corner_radius">5dp</dimen>
+    <dimen name="content_pad_lr">5dp</dimen>
+    <dimen name="content_pad_tb">2dp</dimen>
+
+    <!-- Edits -->
+    <dimen name="edit_font_size">@dimen/gral_font_size_normal</dimen>
+    <dimen name="edit_pad_lr">2dp</dimen>
+    <dimen name="edit_pad_tb">0dp</dimen>
+    <dimen name="edit_cursor_size">1dp</dimen>
+    <dimen name="edit_height">36dp</dimen>
+
+    <!-- Item inventory -->
+    <dimen name="item_inv_font_size">@dimen/gral_font_size_normal</dimen>
+    <dimen name="item_inv_corner_radius">7dp</dimen>
+    <dimen name="item_inv_stroke_size">2dp</dimen>
+    <dimen name="item_inv_height">44dp</dimen>
+
+    <!-- Item counter -->
+    <dimen name="item_counter_font_size">@dimen/gral_font_size_normal</dimen>
+    <dimen name="item_counter_corner_radius">7dp</dimen>
+    <dimen name="item_counter_stroke_size">2dp</dimen>
+    <dimen name="item_counter_height">44dp</dimen>
+
+    <!-- Character -->
+    <dimen name="char_abilities_height">60dp</dimen>
+    <dimen name="char_level_height">60dp</dimen>
+    <dimen name="char_level_width">40dp</dimen>
+
+    <!-- Item combat -->
+    <dimen name="item_combat_height">50dp</dimen>
+    <dimen name="item_combat_divider">2dp</dimen>
+
+    <dimen name="tab_height">40dp</dimen>
+    <dimen name="toolbar_height">50dp</dimen>
+
+    <!-- Action bar -->
+    <dimen name="actionbar_height">40dp</dimen>
+
+    <!-- Number input -->
+    <dimen name="num_input_key_width">78dp</dimen>
+    <dimen name="num_input_key_height">54dp</dimen>
+
+    <!-- -->
+    <dimen name="choose_file_item_height">50dp</dimen>
+
+</resources>

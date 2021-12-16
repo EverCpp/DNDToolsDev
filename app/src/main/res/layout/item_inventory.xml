@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inventoryItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_inv_height"
+    android:layout_margin="1dp"
+    android:background="@drawable/shape_content_square"
+    android:padding="3dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/inventoryItemTextName"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventoryItemLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inventoryItemLayout"
+        app:layout_constraintTop_toTopOf="@+id/inventoryItemLayout"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
+        tools:text="Nombre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

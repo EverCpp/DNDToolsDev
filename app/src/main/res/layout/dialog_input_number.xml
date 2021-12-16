@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/bg01_wood"
+    android:padding="@dimen/dialog_margin">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewInputNumberDesc"
+        style="@style/label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/gral_empty"
+        android:textAlignment="viewStart"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNumber"
+        app:layout_constraintStart_toStartOf="@+id/textViewNumber"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayoutMain"
+        tools:text="Descripción" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNumber"
+        style="@style/content_square_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|end"
+        android:text="@string/gral_zero"
+        android:textSize="@dimen/gral_font_size_large"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutTeclado"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayoutTeclado"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInputNumberDesc" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTeclado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/control_margin_normal"
+        android:alpha="0.8"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutMain"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayoutMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumber">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum7"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_7"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayoutTeclado"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayoutTeclado"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum8"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:text="@string/input_key_8"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/buttonInputNum7"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum7"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum9"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:layout_marginStart="@dimen/control_margin_normal"
+            android:text="@string/input_key_9"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/buttonInputNum8"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum8"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum4"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:layout_marginTop="@dimen/control_margin_normal"
+            android:text="@string/input_key_4"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum7"
+            app:layout_constraintTop_toBottomOf="@+id/buttonInputNum7"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum5"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_5"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum8"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum4"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum6"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_6"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum9"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum5"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum1"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:layout_marginTop="@dimen/control_margin_normal"
+            android:text="@string/input_key_1"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum4"
+            app:layout_constraintTop_toBottomOf="@+id/buttonInputNum4"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum2"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_2"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum5"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum1"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum3"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_3"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum6"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum2"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum0"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:layout_marginTop="@dimen/control_margin_normal"
+            android:text="@string/input_key_0"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum1"
+            app:layout_constraintTop_toBottomOf="@+id/buttonInputNum1"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNum00"
+            style="@style/but_gray_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_00"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum2"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum0"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonInputNumDel"
+            style="@style/but_yellow_style"
+            android:layout_width="@dimen/num_input_key_width"
+            android:layout_height="@dimen/num_input_key_height"
+            android:text="@string/input_key_del"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/buttonInputNum3"
+            app:layout_constraintTop_toTopOf="@+id/buttonInputNum00"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonInputNumberOk"
+        style="@style/but_green_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_but_ok"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonInputNumberCancel"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonInputNumberCancel"
+        style="@style/but_red_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/but_margin"
+        android:text="@string/dialog_but_cancel"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTeclado"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
