@@ -127,8 +127,28 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/charTextLevel">
-
         </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toTopOf="@+id/charToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/charRecyclerAbilities">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/charRecyclerSkills"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_weight="2"
+                android:background="@drawable/shape_content_square"
+                android:paddingStart="@dimen/control_margin_normal"
+                android:paddingEnd="@dimen/control_margin_normal" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/charToolbar"

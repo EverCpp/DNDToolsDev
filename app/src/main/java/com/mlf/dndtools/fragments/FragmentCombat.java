@@ -16,7 +16,7 @@ import com.mlf.dndtools.dialogs.DialogLauncher;
 import com.mlf.dndtools.recyclers.CombatListItemAdapter;
 import com.mlf.dndtools.recyclers.ItemMoveCallback;
 import com.mlf.dndutils.Monster;
-import com.mlf.dndutils.types.EInitiative;
+import com.mlf.dndutils.enums.EInitiative;
 
 @SuppressWarnings({"UnusedReturnValue", "unused"})
 public class FragmentCombat extends Fragment

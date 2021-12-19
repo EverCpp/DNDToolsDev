@@ -103,6 +103,8 @@
     <string name="check_err_user">@string/check_err_text_simple</string>
 
     <!-- Character -->
+
+    <!-- Abilities -->
     <string name="ability_strength">Fuerza</string>
     <string name="ability_dextery">Destreza</string>
     <string name="ability_constitution">Constitución</string>
@@ -110,12 +112,33 @@
     <string name="ability_wisdom">Sabiduría</string>
     <string name="ability_charisma">Carisma</string>
 
+    <!-- Abilities short -->
     <string name="ability_strength_short">Fuerza</string>
     <string name="ability_dextery_short">Dest.</string>
     <string name="ability_constitution_short">Const.</string>
     <string name="ability_intelligence_short">Intel.</string>
     <string name="ability_wisdom_short">Sabid.</string>
     <string name="ability_charisma_short">Carisma</string>
+
+    <!-- Skills-->
+    <string name="skill_athletics">Atletismo</string>
+    <string name="skill_acrobatics">Acrobacias</string>
+    <string name="skill_sleight_of_hand">Juego de manos</string>
+    <string name="skill_stealth">Sigilo</string>
+    <string name="skill_arcana">Conocimiento arcano</string>
+    <string name="skill_history">Historia</string>
+    <string name="skill_investigation">Investigación</string>
+    <string name="skill_nature">Naturaleza</string>
+    <string name="skill_religion">Religión</string>
+    <string name="skill_animal_handling">Trato con animales</string>
+    <string name="skill_insight">Perspicacia</string>
+    <string name="skill_medicine">Medicina</string>
+    <string name="skill_perception">Percepción</string>
+    <string name="skill_survival">Supervivencia</string>
+    <string name="skill_deception">Engaño</string>
+    <string name="skill_intimidation">Intimidación</string>
+    <string name="skill_performance">Interpretación</string>
+    <string name="skill_persuasion">Persuasión</string>
 
     <string name="char_name">Nombre</string>
     <string name="char_background">Trasfondo</string>

@@ -13,30 +13,51 @@ import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
 import com.mlf.dndutils.Char;
 import com.mlf.dndutils.common.Ability;
-import com.mlf.dndutils.types.EAbility;
+import com.mlf.dndutils.enums.EAbility;
+
 import java.util.Locale;
 
 @SuppressWarnings({"UnusedReturnValue", "unused"})
 public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItemAdapter.CharAbilityItemViewHolder>
 {
-    private final Char player;
+    private final Char character;
     private final DialogLauncher dialogLauncher;
     private final AppCompatActivity context;
 
-    public CharAbilityItemAdapter(DialogLauncher dialogLauncher, Char player)
+    public CharAbilityItemAdapter(DialogLauncher dialogLauncher, Char character)
     {
         this.dialogLauncher = dialogLauncher;
         context = this.dialogLauncher.getContext();
-        this.player = player;
+        this.character = character;
     }
 
     @Override
     public int getItemCount()
     {
-        return player.getAbilitiesCount();
+        return character.getAbilitiesCount();
     }
 
     private String getAbilityName(EAbility type)
+    {
+        switch(type)
+        {
+            case STRENGTH:
+                return context.getResources().getString(R.string.ability_strength);
+            case DEXTERITY:
+                return context.getResources().getString(R.string.ability_dextery);
+            case CONSTITUTION:
+                return context.getResources().getString(R.string.ability_constitution);
+            case INTELLIGENCE:
+                return context.getResources().getString(R.string.ability_intelligence);
+            case WISDOM:
+                return context.getResources().getString(R.string.ability_wisdom);
+            case CHARISMA:
+                return context.getResources().getString(R.string.ability_charisma);
+        }
+        return type.name();
+    }
+
+    private String getAbilityShortName(EAbility type)
     {
         switch(type)
         {
@@ -87,18 +108,18 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
     public void onBindViewHolder(@NonNull CharAbilityItemViewHolder holder, int position)
     {
         // Producto y contexto
-        Ability ability = player.getAbility(position);
+        Ability ability = character.getAbility(position);
         Context context = holder.layout.getContext();
 
-        holder.textName.setText(getAbilityName(ability.getType()));
+        holder.textName.setText(getAbilityShortName(ability.getType()));
         holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
-        if(ability.getBonusValue() >= 0)
+        if(ability.getBonusValue() < 0)
         {
-            holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
+            holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
         }
         else
         {
-            holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
+            holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
         }
         holder.textValue.setOnClickListener(new View.OnClickListener()
         {
@@ -113,7 +134,7 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
                         public void OnOk(int number)
                         {
                             ability.setValue(number);
-                            ability.calcBonus();
+                            ability.updateBonus();
                             holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
                             if(ability.getBonusValue() >= 0)
                             {

@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.mlf.dndtools.R;
 import com.mlf.dndutils.Monster;
 import com.mlf.dndutils.common.Counter;
-import com.mlf.dndutils.types.EInitiative;
+import com.mlf.dndutils.enums.EInitiative;
 
 @SuppressWarnings("unused")
 public class DialogLauncher

@@ -17,7 +17,7 @@ import com.mlf.dndtools.dialogs.DialogLauncher;
 import com.mlf.dndtools.objects.MyConstant;
 import com.mlf.dndutils.CombatManager;
 import com.mlf.dndutils.Monster;
-import com.mlf.dndutils.types.EInitiative;
+import com.mlf.dndutils.enums.EInitiative;
 
 import java.util.ArrayList;
 import java.util.Collections;

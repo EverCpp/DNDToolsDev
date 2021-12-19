@@ -13,16 +13,19 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
 import com.mlf.dndtools.objects.MyConstant;
 import com.mlf.dndtools.objects.MyLog;
 import com.mlf.dndtools.recyclers.CharAbilityItemAdapter;
+import com.mlf.dndtools.recyclers.CharSkillItemAdapter;
 import com.mlf.dndutils.Char;
-import com.mlf.dndutils.types.EAlignment;
-import com.mlf.dndutils.types.EClass;
-import com.mlf.dndutils.types.ERace;
+import com.mlf.dndutils.enums.EAlignment;
+import com.mlf.dndutils.enums.EClass;
+import com.mlf.dndutils.enums.ERace;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -33,7 +36,9 @@ public class FragmentCharacter extends Fragment
 
     private View viewFragment;
     private RecyclerView recyclerAbilities;
-    private CharAbilityItemAdapter adapter;
+    private RecyclerView recyclerSkills;
+    private CharAbilityItemAdapter adapterAbilities;
+    private CharSkillItemAdapter adapterSkills;
     private final DialogLauncher dialogLauncher;
     // Controles
     private Toolbar toolbar;
@@ -78,7 +83,8 @@ public class FragmentCharacter extends Fragment
         super.onCreate(savedInstanceState);
 
         // Adapters
-        adapter = new CharAbilityItemAdapter(dialogLauncher, character);
+        adapterAbilities = new CharAbilityItemAdapter(dialogLauncher, character);
+        adapterSkills = new CharSkillItemAdapter(dialogLauncher, character);
     }
 
     @Override
@@ -106,8 +112,14 @@ public class FragmentCharacter extends Fragment
         setupSpinnerAlignments();
         // Recyclers
         recyclerAbilities = viewFragment.findViewById(R.id.charRecyclerAbilities);
-        recyclerAbilities.setLayoutManager(new GridLayoutManager(requireActivity(), adapter.getItemCount()));
-        recyclerAbilities.setAdapter(adapter);
+        recyclerAbilities.setLayoutManager(new GridLayoutManager(requireActivity(), adapterAbilities.getItemCount()));
+        recyclerAbilities.setAdapter(adapterAbilities);
+
+        recyclerSkills = viewFragment.findViewById(R.id.charRecyclerSkills);
+        GridLayoutManager layoutManager = new GridLayoutManager(requireActivity(), adapterSkills.getItemCount());
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerSkills.setLayoutManager(layoutManager);
+        recyclerSkills.setAdapter(adapterSkills);
 
         /*viewFragment.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()
         {
