@@ -48,7 +48,7 @@
         android:id="@+id/combatItemDivider"
         android:layout_width="@dimen/item_counter_stroke_size"
         android:layout_height="wrap_content"
-        android:background="@color/item_counter_normal_stroke"
+        android:background="@color/content_stroke_enabled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/combatLayoutInitiative"
         app:layout_constraintTop_toTopOf="parent"

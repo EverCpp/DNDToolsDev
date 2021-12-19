@@ -39,6 +39,26 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
         return character.getSkillsCount();
     }
 
+    private int getAbilityColor(EAbility type)
+    {
+        switch(type)
+        {
+            case STRENGTH:
+                return context.getResources().getColor(R.color.ability_strength);
+            case DEXTERITY:
+                return context.getResources().getColor(R.color.ability_dexterity);
+            case CONSTITUTION:
+                return context.getResources().getColor(R.color.ability_constitution);
+            case INTELLIGENCE:
+                return context.getResources().getColor(R.color.ability_intelligence);
+            case WISDOM:
+                return context.getResources().getColor(R.color.ability_wisdom);
+            case CHARISMA:
+                return context.getResources().getColor(R.color.ability_charisma);
+        }
+        return context.getResources().getColor(R.color.content_text_enabled);
+    }
+
     private String getAbilityShortName(EAbility type)
     {
         switch(type)
@@ -46,7 +66,7 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
             case STRENGTH:
                 return context.getResources().getString(R.string.ability_strength_short);
             case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dextery_short);
+                return context.getResources().getString(R.string.ability_dexterity_short);
             case CONSTITUTION:
                 return context.getResources().getString(R.string.ability_constitution_short);
             case INTELLIGENCE:
@@ -136,9 +156,15 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
         // Producto y contexto
         Skill skill = character.getSkill(position);
         Context context = holder.layout.getContext();
+        int color = getAbilityColor(skill.getAbility());
 
-        String textName = String.format(Locale.US, "%s (%s)", getSkillName(skill.getSkill()), getAbilityShortName(skill.getAbility()));
-        holder.checkBox.setText(textName);
+        // Color del texto
+        holder.checkBox.setTextColor(color);
+        holder.textBonus.setTextColor(color);
+
+        //String textName = String.format(Locale.US, "%s (%s)", getSkillName(skill.getSkill()), getAbilityShortName(skill.getAbility()));
+        //holder.checkBox.setText(textName);
+        holder.checkBox.setText(getSkillName(skill.getSkill()));
         holder.checkBox.setChecked(skill.isSelected());
         String textBonus;
         if(skill.getBonus() < 0)

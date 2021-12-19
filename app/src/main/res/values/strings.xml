@@ -85,28 +85,20 @@
     <string name="choose_file_up">Arriba</string>
 
     <!-- Errores -->
-    <string name="check_err_range">El valor debe estar entre %d y %d</string>
+    <string name="check_err_range" formatted="false">El valor debe estar entre %d y %d</string>
     <string name="check_err_empty">No puede estar vacío</string>
     <string name="check_err_num_int">Debe ingresar un número entero positivo</string>
     <string name="check_err_num_signed">Debe ingresar un número entero</string>
-    <string name="check_err_alnum">Debe ingresar sólo número y letras sin tilde</string>
+    <string name="check_err_alnum">Debe ingresar sólo números y letras sin tilde</string>
     <string name="check_err_text">No pueden usar letras con tilde o caracteres especiales</string>
-    <string name="check_err_text_simple">Use números, puntos, guiones y letras (sin tilde o caracteres especiales)</string>
     <string name="check_err_email">Formato de email no válido</string>
-    <string name="check_err_date">Formato de fecha no válido</string>
     <string name="check_err_ip">Formato de IP no válido</string>
-    <string name="check_err_phone">Debe ingresar sólo número y guiones</string>
-    <string name="check_err_cuit_dni">Formato de documento no válido</string>
-    <string name="check_err_zipcode">Debe ingresar sólo número y letras sin tilde</string>
-    <string name="check_err_biz">@string/check_err_text</string>
-    <string name="check_err_pass">@string/check_err_text</string>
-    <string name="check_err_user">@string/check_err_text_simple</string>
 
     <!-- Character -->
 
     <!-- Abilities -->
     <string name="ability_strength">Fuerza</string>
-    <string name="ability_dextery">Destreza</string>
+    <string name="ability_dexterity">Destreza</string>
     <string name="ability_constitution">Constitución</string>
     <string name="ability_intelligence">Inteligencia</string>
     <string name="ability_wisdom">Sabiduría</string>
@@ -114,7 +106,7 @@
 
     <!-- Abilities short -->
     <string name="ability_strength_short">Fuerza</string>
-    <string name="ability_dextery_short">Dest.</string>
+    <string name="ability_dexterity_short">Dest.</string>
     <string name="ability_constitution_short">Const.</string>
     <string name="ability_intelligence_short">Intel.</string>
     <string name="ability_wisdom_short">Sabid.</string>
@@ -125,12 +117,12 @@
     <string name="skill_acrobatics">Acrobacias</string>
     <string name="skill_sleight_of_hand">Juego de manos</string>
     <string name="skill_stealth">Sigilo</string>
-    <string name="skill_arcana">Conocimiento arcano</string>
+    <string name="skill_arcana">Conoc. arcano</string>
     <string name="skill_history">Historia</string>
     <string name="skill_investigation">Investigación</string>
     <string name="skill_nature">Naturaleza</string>
     <string name="skill_religion">Religión</string>
-    <string name="skill_animal_handling">Trato con animales</string>
+    <string name="skill_animal_handling">Trato c/animales</string>
     <string name="skill_insight">Perspicacia</string>
     <string name="skill_medicine">Medicina</string>
     <string name="skill_perception">Percepción</string>

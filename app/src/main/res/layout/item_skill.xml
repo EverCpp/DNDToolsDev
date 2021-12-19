@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/skillItemLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/content_bg_enabled">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/skillItemCheckBox"
@@ -19,7 +18,6 @@
         android:paddingStart="@dimen/control_margin_normal"
         android:paddingEnd="@dimen/control_margin_normal"
         android:singleLine="true"
-        android:textAlignment="viewStart"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/skillItemTextBonus"
@@ -31,13 +29,12 @@
     <TextView
         android:id="@+id/skillItemTextBonus"
         style="@style/label_style"
-        android:layout_width="40dp"
+        android:layout_width="@dimen/char_skill_bonus_width"
         android:layout_height="0dp"
-        android:gravity="center_vertical"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="+20" />
+        tools:text="+0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,7 +44,7 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
             case STRENGTH:
                 return context.getResources().getString(R.string.ability_strength);
             case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dextery);
+                return context.getResources().getString(R.string.ability_dexterity);
             case CONSTITUTION:
                 return context.getResources().getString(R.string.ability_constitution);
             case INTELLIGENCE:
@@ -57,6 +57,26 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
         return type.name();
     }
 
+    private int getAbilityColor(EAbility type)
+    {
+        switch(type)
+        {
+            case STRENGTH:
+                return context.getResources().getColor(R.color.ability_strength);
+            case DEXTERITY:
+                return context.getResources().getColor(R.color.ability_dexterity);
+            case CONSTITUTION:
+                return context.getResources().getColor(R.color.ability_constitution);
+            case INTELLIGENCE:
+                return context.getResources().getColor(R.color.ability_intelligence);
+            case WISDOM:
+                return context.getResources().getColor(R.color.ability_wisdom);
+            case CHARISMA:
+                return context.getResources().getColor(R.color.ability_charisma);
+        }
+        return context.getResources().getColor(R.color.content_text_enabled);
+    }
+
     private String getAbilityShortName(EAbility type)
     {
         switch(type)
@@ -64,7 +84,7 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
             case STRENGTH:
                 return context.getResources().getString(R.string.ability_strength_short);
             case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dextery_short);
+                return context.getResources().getString(R.string.ability_dexterity_short);
             case CONSTITUTION:
                 return context.getResources().getString(R.string.ability_constitution_short);
             case INTELLIGENCE:
@@ -110,7 +130,14 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
         // Producto y contexto
         Ability ability = character.getAbility(position);
         Context context = holder.layout.getContext();
+        int color = getAbilityColor(ability.getType());
 
+        // Color del texto
+        holder.textName.setTextColor(color);
+        holder.textValue.setTextColor(color);
+        holder.textBonus.setTextColor(color);
+
+        // Textos
         holder.textName.setText(getAbilityShortName(ability.getType()));
         holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
         if(ability.getBonusValue() < 0)
@@ -121,7 +148,9 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
         {
             holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
         }
-        holder.textValue.setOnClickListener(new View.OnClickListener()
+
+        // Listeners
+        View.OnClickListener onClickValueListener = new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -149,7 +178,10 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
                     dialogLauncher.InputNumber(getAbilityName(ability.getType()), ability);
                 }
             }
-        });
+        };
+
+        holder.textValue.setOnClickListener(onClickValueListener);
+        holder.textName.setOnClickListener(onClickValueListener);
         holder.textBonus.setOnClickListener(new View.OnClickListener()
         {
             @Override

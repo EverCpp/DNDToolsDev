@@ -1,13 +1,9 @@
 package com.mlf.dndtools.objects;
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import com.mlf.dndtools.R;
-import com.mlf.dndtools.dialogs.DialogLauncher;
 
 @SuppressWarnings("unused")
 public class MyConstant
@@ -33,25 +29,6 @@ public class MyConstant
         {
             return errorMsg;
         }
-    }
-
-    public static boolean checkConnection(Context context)
-    {
-        if(isConnectionAvailable(context))
-        {
-           return true;
-        }
-        DialogLauncher dialogLauncher = new DialogLauncher((AppCompatActivity) context);
-        dialogLauncher.ShowOkDialog(R.string.err_no_connection_title, R.string.err_no_connection_msg, DialogLauncher.ICON_ERROR);
-        return false;
-    }
-
-    public static boolean isConnectionAvailable(@NonNull Context context)
-    {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNW = cm.getActiveNetworkInfo();
-        MyLog.e("activeNW " + activeNW);
-        return activeNW != null && activeNW.isConnected();
     }
 
     public static int dp2Px(@NonNull final Context context, final float dp)

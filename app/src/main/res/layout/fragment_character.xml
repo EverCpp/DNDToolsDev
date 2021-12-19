@@ -144,7 +144,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="1dp"
-                android:layout_weight="2"
+                android:layout_weight="1.5"
                 android:background="@drawable/shape_content_square"
                 android:paddingStart="@dimen/control_margin_normal"
                 android:paddingEnd="@dimen/control_margin_normal" />
