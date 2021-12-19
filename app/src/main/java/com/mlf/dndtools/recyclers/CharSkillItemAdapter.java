@@ -162,27 +162,16 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
         holder.checkBox.setTextColor(color);
         holder.textBonus.setTextColor(color);
 
-        //String textName = String.format(Locale.US, "%s (%s)", getSkillName(skill.getSkill()), getAbilityShortName(skill.getAbility()));
-        //holder.checkBox.setText(textName);
+        holder.textBonus.setText(String.format(Locale.US, (skill.getBonus() < 0) ? "%d" : "%+d", skill.getBonus()));
         holder.checkBox.setText(getSkillName(skill.getSkill()));
         holder.checkBox.setChecked(skill.isSelected());
-        String textBonus;
-        if(skill.getBonus() < 0)
-        {
-            textBonus = String.format(Locale.US, "%d", skill.getBonus());
-        }
-        else
-        {
-            textBonus = String.format(Locale.US, "+%d", skill.getBonus());
-        }
-        holder.textBonus.setText(textBonus);
 
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                skill.setSelected(isChecked);
+                character.setSkillSelected(skill.getSkill(), isChecked);
             }
         });
     }

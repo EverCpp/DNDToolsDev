@@ -64,8 +64,10 @@ public class FragmentCharacter extends Fragment
     {
         this.dialogLauncher = dialogLauncher;
         // Personaje
-        character = new Char("Personaje");
+        character = new Char();
         character.setFileName(MyConstant.WORKING_DIR + FILE_PLAYER);
+        MyLog.d("load: " + character.toJSON());
+
         // Razas
         raceTypes = ERace.getAll();
         raceStrings = new ArrayList<>();
