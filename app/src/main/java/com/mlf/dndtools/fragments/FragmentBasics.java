@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
-import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.utils.MyLog;
 import com.mlf.dndtools.recyclers.CounterListItemAdapter;
 import com.mlf.dndtools.recyclers.InventoryItemAdapter;
 import com.mlf.dndtools.recyclers.ItemMoveCallback;

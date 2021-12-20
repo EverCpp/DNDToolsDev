@@ -13,7 +13,6 @@
     <string name="dialog_but_cancel">Cancelar</string>
     <string name="dialog_but_ok">Aceptar</string>
     <string name="dialog_but_exit">Salir</string>
-    <string name="dialog_but_finish">Terminar</string>
 
     <!-- Dialog -->
     <string name="dialog_remove_title">Eliminar</string>
@@ -25,6 +24,8 @@
     <string name="dialog_edit_hitpoints">Puntos de golpe de \"%s\"</string>
     <string name="dialog_edit_add">Agreagar a \"%s\"</string>
     <string name="dialog_edit_suppress">Quitar a \"%s\"</string>
+    <string name="dialog_edit_bonus">Bonificador de %s</string>
+
     <!-- Tabs -->
     <string name="tab_basics">Básico</string>
     <string name="tab_combat">Combate</string>
@@ -96,42 +97,6 @@
 
     <!-- Character -->
 
-    <!-- Abilities -->
-    <string name="ability_strength">Fuerza</string>
-    <string name="ability_dexterity">Destreza</string>
-    <string name="ability_constitution">Constitución</string>
-    <string name="ability_intelligence">Inteligencia</string>
-    <string name="ability_wisdom">Sabiduría</string>
-    <string name="ability_charisma">Carisma</string>
-
-    <!-- Abilities short -->
-    <string name="ability_strength_short">Fuerza</string>
-    <string name="ability_dexterity_short">Dest.</string>
-    <string name="ability_constitution_short">Const.</string>
-    <string name="ability_intelligence_short">Intel.</string>
-    <string name="ability_wisdom_short">Sabid.</string>
-    <string name="ability_charisma_short">Carisma</string>
-
-    <!-- Skills-->
-    <string name="skill_athletics">Atletismo</string>
-    <string name="skill_acrobatics">Acrobacias</string>
-    <string name="skill_sleight_of_hand">Juego de manos</string>
-    <string name="skill_stealth">Sigilo</string>
-    <string name="skill_arcana">Conoc. arcano</string>
-    <string name="skill_history">Historia</string>
-    <string name="skill_investigation">Investigación</string>
-    <string name="skill_nature">Naturaleza</string>
-    <string name="skill_religion">Religión</string>
-    <string name="skill_animal_handling">Trato c/animales</string>
-    <string name="skill_insight">Perspicacia</string>
-    <string name="skill_medicine">Medicina</string>
-    <string name="skill_perception">Percepción</string>
-    <string name="skill_survival">Supervivencia</string>
-    <string name="skill_deception">Engaño</string>
-    <string name="skill_intimidation">Intimidación</string>
-    <string name="skill_performance">Interpretación</string>
-    <string name="skill_persuasion">Persuasión</string>
-
     <string name="char_name">Nombre</string>
     <string name="char_background">Trasfondo</string>
     <string name="char_level">Nivel</string>
@@ -139,41 +104,5 @@
     <string name="def_char_background">Trasfondo</string>
     <string name="def_char_alignment">Alineamiento</string>
     <string name="def_char_level">3</string>
-
-    <!-- Razas y clases -->
-    <string name="race_dragonborn">Dracónico</string>
-    <string name="race_dwarf">Enano</string>
-    <string name="race_elf">Elfo</string>
-    <string name="race_gnome">Gnomo</string>
-    <string name="race_halfelf">Semielfo</string>
-    <string name="race_halfling">Mediano</string>
-    <string name="race_halforc">Semiorco</string>
-    <string name="race_human">Humano</string>
-    <string name="race_tiefling">Tiflin</string>
-
-    <string name="class_barbarian">Bárbaro</string>
-    <string name="class_bard">Bardo</string>
-    <string name="class_cleric">Clérigo</string>
-    <string name="class_druid">Druida</string>
-    <string name="class_fighter">Guerrero</string>
-    <string name="class_monk">Monje</string>
-    <string name="class_paladin">Paladín</string>
-    <string name="class_ranger">Explorador</string>
-    <string name="class_rouge">Pícaro</string>
-    <string name="class_sorcerer">Hechicero</string>
-    <string name="class_warlock">Brujo</string>
-    <string name="class_wizard">Mago</string>
-
-    <!-- Alignment -->
-    <string name="align_unaligned">No alineado</string>
-    <string name="align_lawful_good">Legal bueno</string>
-    <string name="align_neutral_good">Neutral bueno</string>
-    <string name="align_chaotic_good">Caótico bueno</string>
-    <string name="align_lawful_neutral">Legal neutral</string>
-    <string name="align_true_neutral"> Neutral real</string>
-    <string name="align_chaotic_neutral">Caótico neutral</string>
-    <string name="align_lawful_evil">Legal malo</string>
-    <string name="align_neutral_evil">Neutral malo</string>
-    <string name="align_chaotic_evil">Caótico malo</string>
 
 </resources>

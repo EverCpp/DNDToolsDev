@@ -3,15 +3,19 @@ package com.mlf.dndtools;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.mlf.dndtools.dialogs.DialogLauncher;
-import com.mlf.dndtools.objects.MyConstant;
-import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.utils.Constant;
+import com.mlf.dndtools.utils.MyLog;
 import com.mlf.dndtools.recyclers.MainToolsAdapter;
+import com.mlf.dndutils.common.Lang;
+
+import java.io.IOException;
 
 @SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity
@@ -38,14 +42,23 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         // Directorio de la aplicación
-        MyConstant.WORKING_DIR = getFilesDir().getAbsolutePath();
-        if(!MyConstant.WORKING_DIR.endsWith("/") && !MyConstant.WORKING_DIR.endsWith("\\"))
+        Constant.WORKING_DIR = getFilesDir().getAbsolutePath();
+        if(!Constant.WORKING_DIR.endsWith("/") && !Constant.WORKING_DIR.endsWith("\\"))
         {
-            MyConstant.WORKING_DIR += "/";
+            Constant.WORKING_DIR += "/";
         }
-        MyLog.e("WORKING_DIR:" + MyConstant.WORKING_DIR);
+        MyLog.e("WORKING_DIR:" + Constant.WORKING_DIR);
 
         toastShowed = false;
+
+        try
+        {
+            Constant.lang = new Lang(getAssets().open("lang/lang_es.txt"));
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
 
         // Dialog launcher
         dialogLauncher = new DialogLauncher(this);

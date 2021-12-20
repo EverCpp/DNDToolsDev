@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.Char;
 import com.mlf.dndutils.common.Ability;
 import com.mlf.dndutils.enums.EAbility;
@@ -37,26 +38,6 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
         return character.getAbilitiesCount();
     }
 
-    private String getAbilityName(EAbility type)
-    {
-        switch(type)
-        {
-            case STRENGTH:
-                return context.getResources().getString(R.string.ability_strength);
-            case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dexterity);
-            case CONSTITUTION:
-                return context.getResources().getString(R.string.ability_constitution);
-            case INTELLIGENCE:
-                return context.getResources().getString(R.string.ability_intelligence);
-            case WISDOM:
-                return context.getResources().getString(R.string.ability_wisdom);
-            case CHARISMA:
-                return context.getResources().getString(R.string.ability_charisma);
-        }
-        return type.name();
-    }
-
     private int getAbilityColor(EAbility type)
     {
         switch(type)
@@ -75,26 +56,6 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
                 return context.getResources().getColor(R.color.ability_charisma);
         }
         return context.getResources().getColor(R.color.content_text_enabled);
-    }
-
-    private String getAbilityShortName(EAbility type)
-    {
-        switch(type)
-        {
-            case STRENGTH:
-                return context.getResources().getString(R.string.ability_strength_short);
-            case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dexterity_short);
-            case CONSTITUTION:
-                return context.getResources().getString(R.string.ability_constitution_short);
-            case INTELLIGENCE:
-                return context.getResources().getString(R.string.ability_intelligence_short);
-            case WISDOM:
-                return context.getResources().getString(R.string.ability_wisdom_short);
-            case CHARISMA:
-                return context.getResources().getString(R.string.ability_charisma_short);
-        }
-        return type.name();
     }
 
     /**
@@ -138,7 +99,7 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
         holder.textBonus.setTextColor(color);
 
         // Textos
-        holder.textName.setText(getAbilityShortName(ability.getType()));
+        holder.textName.setText(Constant.lang.getShortName(ability));
         holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
         if(ability.getBonusValue() < 0)
         {
@@ -155,28 +116,25 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
             @Override
             public void onClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
+                        ability.setValue(number);
+                        ability.updateBonus();
+                        holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
+                        if(ability.getBonusValue() >= 0)
                         {
-                            ability.setValue(number);
-                            ability.updateBonus();
-                            holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
-                            if(ability.getBonusValue() >= 0)
-                            {
-                                holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
-                            }
-                            else
-                            {
-                                holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
-                            }
+                            holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
                         }
-                    });
-                    dialogLauncher.InputNumber(getAbilityName(ability.getType()), ability);
-                }
+                        else
+                        {
+                            holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
+                        }
+                    }
+                });
+                dialogLauncher.InputNumber(Constant.lang.getName(ability), ability);
             }
         };
 
@@ -187,26 +145,23 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
             @Override
             public void onClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
+                        ability.setBonus(number);
+                        if(ability.getBonusValue() >= 0)
                         {
-                            ability.setBonus(number);
-                            if(ability.getBonusValue() >= 0)
-                            {
-                                holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
-                            }
-                            else
-                            {
-                                holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
-                            }
+                            holder.textBonus.setText(String.format(Locale.US, "+%d", ability.getBonusValue()));
                         }
-                    });
-                    dialogLauncher.InputNumber("Bonificador de " + getAbilityName(ability.getType()), ability.getBonus());
-                }
+                        else
+                        {
+                            holder.textBonus.setText(String.format(Locale.US, "%d", ability.getBonusValue()));
+                        }
+                    }
+                });
+                dialogLauncher.InputNumber(String.format(Locale.US, context.getString(R.string.dialog_edit_bonus),  Constant.lang.getName(ability)), ability.getBonus());
             }
         });
     }

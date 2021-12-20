@@ -1,0 +1,95 @@
+# Abilities
+Ability.STRENGTH=Fuerza
+Ability.DEXTERITY=Destreza
+Ability.CONSTITUTION=Constitución
+Ability.INTELLIGENCE=Inteligencia
+Ability.WISDOM=Sabiduria
+Ability.CHARISMA=Carisma
+Ability.Short.STRENGTH=Fuerza
+Ability.Short.DEXTERITY=Dest.
+Ability.Short.CONSTITUTION=Const.
+Ability.Short.INTELLIGENCE=Intel.
+Ability.Short.WISDOM=Sabid.
+Ability.Short.CHARISMA=Carisma
+# Skills
+Skill.ATHLETICS=Atletismo
+Skill.ACROBATICS=Acrobacias
+Skill.SLEIGHT_OF_HAND=Juego de manos
+Skill.STEALTH=Sigilo
+Skill.ARCANA=Conoc. arcano
+Skill.HISTORY=Historia
+Skill.INVESTIGATION=Investigación
+Skill.NATURE=Naturaleza
+Skill.RELIGION=Religión
+Skill.ANIMAL_HANDLING=Trato c/animales
+Skill.INSIGHT=Perspicacia
+Skill.MEDICINE=Medicina
+Skill.PERCEPTION=Percepción
+Skill.SURVIVAL=Supervivencia
+Skill.DECEPTION=Engaño
+Skill.INTIMIDATION=Intimidación
+Skill.PERFORMANCE=Interpretación
+Skill.PERSUASION=Persuasión
+# Alignment
+Alignment.UNALIGNED=No alineado
+Alignment.LAWFUL_GOOD=Legal bueno
+Alignment.NEUTRAL_GOOD=Neutral bueno
+Alignment.CHAOTIC_GOOD=Caótico bueno
+Alignment.LAWFUL_NEUTRAL=Legal neutral
+Alignment.TRUE_NEUTRAL=Neutral real
+Alignment.CHAOTIC_NEUTRAL=Caótico neutral
+Alignment.LAWFUL_EVIL=Legal malo
+Alignment.NEUTRAL_EVIL=Neutral malo
+Alignment.CHAOTIC_EVIL=Caótico malo
+# Class
+Class.BARBARIAN=Bárbaro
+Class.BARD=Bardo
+Class.CLERIC=Clérigo
+Class.DRUID=Druida
+Class.FIGHTER=Guerrero
+Class.MONK=Monje
+Class.PALADIN=Paladín
+Class.RANGER=Explorador
+Class.ROUGE=Pícaro
+Class.SORCERER=Hechicero
+Class.WARLOCK=Brujo
+Class.WIZARD=Mago
+# Initiative
+Initiative.MANUAL=Manual
+Initiative.AUTO=Automática
+Initiative.NONE=Ninguna
+#Language
+Language.COMMON=Común
+Language.DWARVISH=Enano
+Language.ELVISH=Élfico
+Language.GIANT=Gigante
+Language.GNOMISH=Gnómico
+Language.GOBLIN=Goblin
+Language.HALFLING=Mediano
+Language.ORC=Orco
+Language.DRUIDIC=Druídico
+Language.GNOLL=Gnoll
+Language.THIEVES_CANT=Jerga de Ladrones
+Language.ABYSSAL=Abisal
+Language.CELESTIAL=Celestial
+Language.DRACONIC=Dracónico
+Language.DEEP_SPEECH=Habla profunda
+Language.INFERNAL=Infernal
+Language.PRIMORDIAL=Primordial
+Language.AQUAN=Aquan (Dialecto Primordial)
+Language.AURAN=Auran (Dialecto Primordial)
+Language.IGNAN=Ignan (Dialecto Primordial)
+Language.TERRAN=Terran (Dialecto Primordial)
+Language.SYLVAN=Silvano
+Language.UNDERCOMMON=Infracomún
+# Race
+Race.DRAGONBORN=Dracónico
+Race.DWARF=Enano
+Race.ELF=Elfo
+Race.GNOME=Gnomo
+Race.HALFELF=Semielfo
+Race.HALFLING=Mediano
+Race.HALFORC=Semiorco
+Race.HUMAN=Humano
+Race.TIEFLING=Tiflin
+

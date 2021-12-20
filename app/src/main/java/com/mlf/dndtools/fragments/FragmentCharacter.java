@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
-import com.mlf.dndtools.objects.MyConstant;
-import com.mlf.dndtools.objects.MyLog;
+import com.mlf.dndtools.utils.Constant;
+import com.mlf.dndtools.utils.MyLog;
 import com.mlf.dndtools.recyclers.CharAbilityItemAdapter;
 import com.mlf.dndtools.recyclers.CharSkillItemAdapter;
 import com.mlf.dndutils.Char;
@@ -65,7 +65,7 @@ public class FragmentCharacter extends Fragment
         this.dialogLauncher = dialogLauncher;
         // Personaje
         character = new Char();
-        character.setFileName(MyConstant.WORKING_DIR + FILE_PLAYER);
+        character.setFileName(Constant.WORKING_DIR + FILE_PLAYER);
         MyLog.d("load: " + character.toJSON());
 
         // Razas
@@ -204,19 +204,16 @@ public class FragmentCharacter extends Fragment
             @Override
             public void onClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
-                        {
-                            character.setLevel(number);
-                            textLevel.setText(String.format(Locale.US, "%d", character.getLevelValue()));
-                        }
-                    });
-                    dialogLauncher.InputNumber(getResources().getString(R.string.char_level), character.getLevel());
-                }
+                        character.setLevel(number);
+                        textLevel.setText(String.format(Locale.US, "%d", character.getLevelValue()));
+                    }
+                });
+                dialogLauncher.InputNumber(getResources().getString(R.string.char_level), character.getLevel());
             }
         });
     }
@@ -225,15 +222,15 @@ public class FragmentCharacter extends Fragment
     {
         for(ERace race : raceTypes)
         {
-            raceStrings.add(raceToString(race));
+            raceStrings.add(Constant.lang.getName(race));
         }
         for(EClass type : classTypes)
         {
-            classStrings.add(classToString(type));
+            classStrings.add(Constant.lang.getName(type));
         }
         for(EAlignment type : alignTypes)
         {
-            alignStrings.add(alignmentToString(type));
+            alignStrings.add(Constant.lang.getName(type));
         }
         for(String aling : alignStrings)
         {
@@ -291,91 +288,5 @@ public class FragmentCharacter extends Fragment
             public void onNothingSelected(AdapterView<?> adapterView){}
         });
         spinnerAlign.setSelection(alignTypes.indexOf(character.getAlignment()));
-    }
-
-    private String classToString(EClass type)
-    {
-        switch(type)
-        {
-            case BARBARIAN:
-                return getResources().getString(R.string.class_barbarian);
-            case BARD:
-                return getResources().getString(R.string.class_bard);
-            case CLERIC:
-                return getResources().getString(R.string.class_cleric);
-            case DRUID:
-                return getResources().getString(R.string.class_druid);
-            case FIGHTER:
-                return getResources().getString(R.string.class_fighter);
-            case MONK:
-                return getResources().getString(R.string.class_monk);
-            case PALADIN:
-                return getResources().getString(R.string.class_paladin);
-            case RANGER:
-                return getResources().getString(R.string.class_ranger);
-            case ROUGE:
-                return getResources().getString(R.string.class_rouge);
-            case SORCERER:
-                return getResources().getString(R.string.class_sorcerer);
-            case WARLOCK:
-                return getResources().getString(R.string.class_warlock);
-            case WIZARD:
-                return getResources().getString(R.string.class_wizard);
-        }
-        return type.name();
-    }
-
-    private String raceToString(ERace type)
-    {
-        switch(type)
-        {
-            case DRAGONBORN:
-                return getResources().getString(R.string.race_dragonborn);
-            case DWARF:
-                return getResources().getString(R.string.race_dwarf);
-            case ELF:
-                return getResources().getString(R.string.race_elf);
-            case GNOME:
-                return getResources().getString(R.string.race_gnome);
-            case HALFELF:
-                return getResources().getString(R.string.race_halfelf);
-            case HALFLING:
-                return getResources().getString(R.string.race_halfling);
-            case HALFORC:
-                return getResources().getString(R.string.race_halforc);
-            case HUMAN:
-                return getResources().getString(R.string.race_human);
-            case TIEFLING:
-                return getResources().getString(R.string.race_tiefling);
-        }
-        return type.name();
-    }
-
-    private String alignmentToString(EAlignment type)
-    {
-        switch(type)
-        {
-            case UNALIGNED:
-                return getResources().getString(R.string.align_unaligned);
-            case LAWFUL_GOOD:
-                return getResources().getString(R.string.align_lawful_good);
-            case NEUTRAL_GOOD:
-                return getResources().getString(R.string.align_neutral_good);
-            case CHAOTIC_GOOD:
-                return getResources().getString(R.string.align_chaotic_good);
-            case LAWFUL_NEUTRAL:
-                return getResources().getString(R.string.align_lawful_neutral);
-            case TRUE_NEUTRAL:
-                return getResources().getString(R.string.align_true_neutral);
-            case CHAOTIC_NEUTRAL:
-                return getResources().getString(R.string.align_chaotic_neutral);
-            case LAWFUL_EVIL:
-                return getResources().getString(R.string.align_lawful_evil);
-            case NEUTRAL_EVIL:
-                return getResources().getString(R.string.align_neutral_evil);
-            case CHAOTIC_EVIL:
-                return getResources().getString(R.string.align_chaotic_evil);
-        }
-        return type.name();
     }
 }

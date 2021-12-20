@@ -13,10 +13,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.Char;
 import com.mlf.dndutils.common.Skill;
 import com.mlf.dndutils.enums.EAbility;
-import com.mlf.dndutils.enums.ESkill;
 import java.util.Locale;
 
 @SuppressWarnings({"UnusedReturnValue", "unused"})
@@ -59,70 +59,6 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
         return context.getResources().getColor(R.color.content_text_enabled);
     }
 
-    private String getAbilityShortName(EAbility type)
-    {
-        switch(type)
-        {
-            case STRENGTH:
-                return context.getResources().getString(R.string.ability_strength_short);
-            case DEXTERITY:
-                return context.getResources().getString(R.string.ability_dexterity_short);
-            case CONSTITUTION:
-                return context.getResources().getString(R.string.ability_constitution_short);
-            case INTELLIGENCE:
-                return context.getResources().getString(R.string.ability_intelligence_short);
-            case WISDOM:
-                return context.getResources().getString(R.string.ability_wisdom_short);
-            case CHARISMA:
-                return context.getResources().getString(R.string.ability_charisma_short);
-        }
-        return type.name();
-    }
-
-    private String getSkillName(ESkill type)
-    {
-        switch(type)
-        {
-            case ATHLETICS:
-                return context.getResources().getString(R.string.skill_athletics);
-            case ACROBATICS:
-                return context.getResources().getString(R.string.skill_acrobatics);
-            case SLEIGHT_OF_HAND:
-                return context.getResources().getString(R.string.skill_sleight_of_hand);
-            case STEALTH:
-                return context.getResources().getString(R.string.skill_stealth);
-            case ARCANA:
-                return context.getResources().getString(R.string.skill_arcana);
-            case HISTORY:
-                return context.getResources().getString(R.string.skill_history);
-            case INVESTIGATION:
-                return context.getResources().getString(R.string.skill_investigation);
-            case NATURE:
-                return context.getResources().getString(R.string.skill_nature);
-            case RELIGION:
-                return context.getResources().getString(R.string.skill_religion);
-            case ANIMAL_HANDLING:
-                return context.getResources().getString(R.string.skill_animal_handling);
-            case INSIGHT:
-                return context.getResources().getString(R.string.skill_insight);
-            case MEDICINE:
-                return context.getResources().getString(R.string.skill_medicine);
-            case PERCEPTION:
-                return context.getResources().getString(R.string.skill_perception);
-            case SURVIVAL:
-                return context.getResources().getString(R.string.skill_survival);
-            case DECEPTION:
-                return context.getResources().getString(R.string.skill_deception);
-            case INTIMIDATION:
-                return context.getResources().getString(R.string.skill_intimidation);
-            case PERFORMANCE:
-                return context.getResources().getString(R.string.skill_performance);
-            case PERSUASION:
-                return context.getResources().getString(R.string.skill_persuasion);
-        }
-        return type.name();
-    }
-
     /**
      * Provide a reference to the type of views that you are using (custom GridItemViewHolder).
      */
@@ -162,16 +98,36 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
         holder.checkBox.setTextColor(color);
         holder.textBonus.setTextColor(color);
 
-        holder.textBonus.setText(String.format(Locale.US, (skill.getBonus() < 0) ? "%d" : "%+d", skill.getBonus()));
-        holder.checkBox.setText(getSkillName(skill.getSkill()));
+        // Texto/estado
+        holder.textBonus.setText(String.format(Locale.US, (skill.getBonusValue() < 0) ? "%d" : "%+d", skill.getBonusValue()));
+        holder.checkBox.setText(Constant.lang.getName(skill));
         holder.checkBox.setChecked(skill.isSelected());
 
+        // Listeners
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
                 character.setSkillSelected(skill.getSkill(), isChecked);
+            }
+        });
+
+        holder.textBonus.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                {
+                    @Override
+                    public void OnOk(int number)
+                    {
+                        skill.setBonus(number);
+                        holder.textBonus.setText(String.format(Locale.US, (skill.getBonusValue() < 0) ? "%d" : "%+d", skill.getBonus()));
+                    }
+                });
+                dialogLauncher.InputNumber(String.format(Locale.US, context.getString(R.string.dialog_edit_bonus),  Constant.lang.getName(skill)), skill.getBonus());
             }
         });
     }

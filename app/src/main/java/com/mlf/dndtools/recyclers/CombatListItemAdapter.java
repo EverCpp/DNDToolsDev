@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.enofir.utils.files.EnoFiles;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
-import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.CombatManager;
 import com.mlf.dndutils.Monster;
 import com.mlf.dndutils.enums.EInitiative;
@@ -37,7 +37,7 @@ public class CombatListItemAdapter extends RecyclerView.Adapter<CombatListItemAd
     {
         this.dialogLauncher = dialogLauncher;
         context = this.dialogLauncher.getContext();
-        fileName = MyConstant.WORKING_DIR + FILE_DATA;
+        fileName = Constant.WORKING_DIR + FILE_DATA;
         items = new ArrayList<>();
         Load();
     }
@@ -298,23 +298,20 @@ public class CombatListItemAdapter extends RecyclerView.Adapter<CombatListItemAd
             @Override
             public void onClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputTextResult(new DialogLauncher.OnInputTextResult()
                 {
-                    dialogLauncher.setOnInputTextResult(new DialogLauncher.OnInputTextResult()
+                    @Override
+                    public void OnOk(String text)
                     {
-                        @Override
-                        public void OnOk(String text)
+                        if((text != null) && !text.isEmpty())
                         {
-                            if((text != null) && !text.isEmpty())
-                            {
-                                item.setName(text);
-                                holder.textName.setText(item.getName());
-                                Save();
-                            }
+                            item.setName(text);
+                            holder.textName.setText(item.getName());
+                            Save();
                         }
-                    });
-                    dialogLauncher.InputText(context.getString(R.string.dialog_edit_name), item.getName());
-                }
+                    }
+                });
+                dialogLauncher.InputText(context.getString(R.string.dialog_edit_name), item.getName());
             }
         });
         holder.textHitPoints.setOnClickListener(new View.OnClickListener()
@@ -322,20 +319,17 @@ public class CombatListItemAdapter extends RecyclerView.Adapter<CombatListItemAd
             @Override
             public void onClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
-                        {
-                            item.setHitPoints(number);
-                            holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
-                            Save();
-                        }
-                    });
-                    dialogLauncher.InputNumber(String.format(Locale.US, context.getString(R.string.dialog_edit_hitpoints), item.getName()), item.getHitPoints());
-                }
+                        item.setHitPoints(number);
+                        holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
+                        Save();
+                    }
+                });
+                dialogLauncher.InputNumber(String.format(Locale.US, context.getString(R.string.dialog_edit_hitpoints), item.getName()), item.getHitPoints());
             }
         });
         holder.butUp.setOnClickListener(new View.OnClickListener()
@@ -353,20 +347,17 @@ public class CombatListItemAdapter extends RecyclerView.Adapter<CombatListItemAd
             @Override
             public boolean onLongClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
-                        {
-                            item.getHitPoints().inc(number);
-                            holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
-                            Save();
-                        }
-                    });
-                    dialogLauncher.InputNumber(String.format(Locale.US, context.getResources().getString(R.string.dialog_edit_add), item.getName()), 0, false);
-                }
+                        item.getHitPoints().inc(number);
+                        holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
+                        Save();
+                    }
+                });
+                dialogLauncher.InputNumber(String.format(Locale.US, context.getResources().getString(R.string.dialog_edit_add), item.getName()), 0, false);
                 return true;
             }
         });
@@ -385,20 +376,17 @@ public class CombatListItemAdapter extends RecyclerView.Adapter<CombatListItemAd
             @Override
             public boolean onLongClick(View v)
             {
-                if(dialogLauncher != null)
+                dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
                 {
-                    dialogLauncher.setOnInputNumberResult(new DialogLauncher.OnInputNumberResult()
+                    @Override
+                    public void OnOk(int number)
                     {
-                        @Override
-                        public void OnOk(int number)
-                        {
-                            item.getHitPoints().dec(number);
-                            holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
-                            Save();
-                        }
-                    });
-                    dialogLauncher.InputNumber(String.format(Locale.US, context.getResources().getString(R.string.dialog_edit_suppress), item.getName()), 0, false);
-                }
+                        item.getHitPoints().dec(number);
+                        holder.textHitPoints.setText(String.format(Locale.US, "%d", item.getHitPoints().getValue()));
+                        Save();
+                    }
+                });
+                dialogLauncher.InputNumber(String.format(Locale.US, context.getResources().getString(R.string.dialog_edit_suppress), item.getName()), 0, false);
                 return true;
             }
         });

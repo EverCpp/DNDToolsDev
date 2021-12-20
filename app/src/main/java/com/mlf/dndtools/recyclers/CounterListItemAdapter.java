@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.enofir.utils.files.EnoFiles;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
-import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.common.Counter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,7 +33,7 @@ public class CounterListItemAdapter extends RecyclerView.Adapter<CounterListItem
     {
         this.dialogLauncher = dialogLauncher;
         context = this.dialogLauncher.getContext();
-        fileName = MyConstant.WORKING_DIR + FILE_DATA;
+        fileName = Constant.WORKING_DIR + FILE_DATA;
         items = new ArrayList<>();
         Load();
     }

@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.mlf.dndtools.R;
-import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.CombatManager;
 import com.mlf.dndutils.enums.EInitiative;
 
@@ -142,11 +142,11 @@ public class InputMonsterPlayerActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 // Nombre / Prefijo
-                if(!MyConstant.isValidAndNotEmpty(editNamePref, MyConstant.InType.TEXT)){ return; }
+                if(!Constant.isValidAndNotEmpty(editNamePref, Constant.InType.TEXT)){ return; }
                 String name = editNamePref.getText().toString().trim();
 
                 // Cantidad
-                if(!MyConstant.isValidAndNotEmpty(editCount, MyConstant.InType.NUM_UNSIGNED_NUM)){ return; }
+                if(!Constant.isValidAndNotEmpty(editCount, Constant.InType.NUM_UNSIGNED_NUM)){ return; }
                 int count = Integer.parseInt(editCount.getText().toString().trim());
                 if((count < 1) || (count > CombatManager.MAX_AT_ONCE))
                 {
@@ -154,11 +154,11 @@ public class InputMonsterPlayerActivity extends AppCompatActivity
                 }
 
                 // Iniciativa
-                if(!MyConstant.isValidAndNotEmpty(editBonusValue, MyConstant.InType.NUM_UNSIGNED_NUM)){ return; }
+                if(!Constant.isValidAndNotEmpty(editBonusValue, Constant.InType.NUM_UNSIGNED_NUM)){ return; }
                 int bonus_value = Integer.parseInt(editBonusValue.getText().toString().trim());
 
                 // Puntos de golpe
-                if(!MyConstant.isValidAndNotEmpty(editHitPoints, MyConstant.InType.NUM_UNSIGNED_NUM)){ return; }
+                if(!Constant.isValidAndNotEmpty(editHitPoints, Constant.InType.NUM_UNSIGNED_NUM)){ return; }
                 int hitPoints = Integer.parseInt(editHitPoints.getText().toString().trim());
 
                 // Intent

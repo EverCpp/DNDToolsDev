@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mlf.dndtools.R;
-import com.mlf.dndtools.objects.MyConstant;
+import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndutils.common.Counter;
 
 import java.util.Locale;
@@ -129,21 +129,21 @@ public class InputTextActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                MyConstant.InType inType;
+                Constant.InType inType;
                 switch(type)
                 {
                     case TYPE_SIGNED_NUM:
-                        inType = MyConstant.InType.NUM_SIGNED_NUM;
+                        inType = Constant.InType.NUM_SIGNED_NUM;
                         break;
                     case TYPE_UNSIGNED_NUM:
-                        inType = MyConstant.InType.NUM_UNSIGNED_NUM;
+                        inType = Constant.InType.NUM_UNSIGNED_NUM;
                         break;
                     case TYPE_TEXT:
                     default:
-                        inType = MyConstant.InType.TEXT;
+                        inType = Constant.InType.TEXT;
                         break;
                 }
-                if(!MyConstant.isValidAndNotEmpty(editText, inType)){ return; }
+                if(!Constant.isValidAndNotEmpty(editText, inType)){ return; }
 
                     Intent intent = new Intent();
                 String text = editText.getText().toString().trim();

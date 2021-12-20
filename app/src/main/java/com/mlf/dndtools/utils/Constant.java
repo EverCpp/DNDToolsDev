@@ -1,15 +1,18 @@
-package com.mlf.dndtools.objects;
+package com.mlf.dndtools.utils;
 
 import android.content.Context;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
 import com.mlf.dndtools.R;
+import com.mlf.dndutils.common.Lang;
 
 @SuppressWarnings("unused")
-public class MyConstant
+public class Constant
 {
     public static boolean DEBUG = true;         // @MLF Poner en false para la versión final
     public static String WORKING_DIR;           // Directorio de trabajo
+
+    public static Lang lang;
 
     public enum InType
     {
