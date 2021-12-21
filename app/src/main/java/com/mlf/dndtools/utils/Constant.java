@@ -9,8 +9,8 @@ import com.mlf.dndutils.common.Lang;
 @SuppressWarnings("unused")
 public class Constant
 {
-    public static boolean DEBUG = true;         // @MLF Poner en false para la versión final
-    public static String WORKING_DIR;           // Directorio de trabajo
+    public static boolean DEBUG = false;    // @MLF Poner en false para la versión final
+    public static String WORKING_DIR;       // Directorio de trabajo
 
     public static Lang lang;
 

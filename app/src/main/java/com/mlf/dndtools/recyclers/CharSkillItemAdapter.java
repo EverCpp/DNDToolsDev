@@ -124,7 +124,7 @@ public class CharSkillItemAdapter extends RecyclerView.Adapter<CharSkillItemAdap
                     public void OnOk(int number)
                     {
                         skill.setBonus(number);
-                        holder.textBonus.setText(String.format(Locale.US, (skill.getBonusValue() < 0) ? "%d" : "%+d", skill.getBonus()));
+                        holder.textBonus.setText(String.format(Locale.US, (skill.getBonusValue() < 0) ? "%d" : "%+d", skill.getBonusValue()));
                     }
                 });
                 dialogLauncher.InputNumber(String.format(Locale.US, context.getString(R.string.dialog_edit_bonus),  Constant.lang.getName(skill)), skill.getBonus());

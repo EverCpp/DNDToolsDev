@@ -122,7 +122,6 @@ public class CharAbilityItemAdapter extends RecyclerView.Adapter<CharAbilityItem
                     public void OnOk(int number)
                     {
                         ability.setValue(number);
-                        ability.updateBonus();
                         holder.textValue.setText(String.format(Locale.US, "%d", ability.getValue()));
                         if(ability.getBonusValue() >= 0)
                         {
