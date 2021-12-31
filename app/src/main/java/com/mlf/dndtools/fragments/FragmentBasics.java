@@ -145,7 +145,7 @@ public class FragmentBasics extends Fragment
                     @Override
                     public void OnOk(String text)
                     {
-                        Counter counter = new Counter(text, 0, 100000);
+                        Counter counter = new Counter(text);
                         adapterCounters.addItem(counter);
                     }
                 });

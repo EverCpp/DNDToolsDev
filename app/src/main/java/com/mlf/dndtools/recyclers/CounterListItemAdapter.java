@@ -53,9 +53,9 @@ public class CounterListItemAdapter extends RecyclerView.Adapter<CounterListItem
         }
         else
         {
-            addItem(new Counter("Contador ejemplo 1", 0, 100000));
-            addItem(new Counter("Contador ejemplo 2", 0, 100000));
-            addItem(new Counter("Contador ejemplo 3", 0, 100000));
+            addItem(new Counter("Contador ejemplo 1"));
+            addItem(new Counter("Contador ejemplo 2"));
+            addItem(new Counter("Contador ejemplo 3"));
         }
     }
 

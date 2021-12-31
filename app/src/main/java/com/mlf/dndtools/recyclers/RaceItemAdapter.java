@@ -1,0 +1,40 @@
+package com.mlf.dndtools.recyclers;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+import com.mlf.dndutils.enums.ERace;
+import com.mlf.dndutils.enums.ESubRace;
+
+import java.util.ArrayList;
+
+public class RaceItemAdapter extends BaseAdapter
+{
+    private ArrayList<ERace> arrRace;
+    private ArrayList<ESubRace> arrSub;
+
+    @Override
+    public int getCount()
+    {
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int position)
+    {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position)
+    {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
+        return null;
+    }
+}

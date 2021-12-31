@@ -25,6 +25,7 @@
     <string name="dialog_edit_add">Agreagar a \"%s\"</string>
     <string name="dialog_edit_suppress">Quitar a \"%s\"</string>
     <string name="dialog_edit_bonus">Bonificador de %s</string>
+    <string name="dialog_edit_saving">Bonificador de tirada de salvación de %s</string>
 
     <!-- Tabs -->
     <string name="tab_basics">Básico</string>

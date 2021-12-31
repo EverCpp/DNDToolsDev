@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mlf.dndtools.R;
 import com.mlf.dndtools.dialogs.DialogLauncher;
+import com.mlf.dndtools.recyclers.CharSavingItemAdapter;
 import com.mlf.dndtools.utils.Constant;
 import com.mlf.dndtools.utils.MyLog;
 import com.mlf.dndtools.recyclers.CharAbilityItemAdapter;
@@ -37,8 +38,10 @@ public class FragmentCharacter extends Fragment
     private View viewFragment;
     private RecyclerView recyclerAbilities;
     private RecyclerView recyclerSkills;
+    private RecyclerView recyclerSavings;
     private CharAbilityItemAdapter adapterAbilities;
     private CharSkillItemAdapter adapterSkills;
+    private CharSavingItemAdapter adapterSavings;
     private final DialogLauncher dialogLauncher;
     // Controles
     private Toolbar toolbar;
@@ -87,6 +90,7 @@ public class FragmentCharacter extends Fragment
         // Adapters
         adapterAbilities = new CharAbilityItemAdapter(dialogLauncher, character);
         adapterSkills = new CharSkillItemAdapter(dialogLauncher, character);
+        adapterSavings = new CharSavingItemAdapter(dialogLauncher, character);
     }
 
     @Override
@@ -122,6 +126,10 @@ public class FragmentCharacter extends Fragment
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerSkills.setLayoutManager(layoutManager);
         recyclerSkills.setAdapter(adapterSkills);
+
+        recyclerSavings = viewFragment.findViewById(R.id.charRecyclerSavings);
+        recyclerSavings.setLayoutManager(new LinearLayoutManager(requireActivity()));
+        recyclerSavings.setAdapter(adapterSavings);
 
         /*viewFragment.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()
         {

@@ -55,6 +55,8 @@
     <dimen name="char_level_height">60dp</dimen>
     <dimen name="char_level_width">40dp</dimen>
     <dimen name="char_skill_bonus_width">36dp</dimen>
+    <dimen name="char_saving_bonus_width">36dp</dimen>
+    <dimen name="char_saving_height">30dp</dimen>
 
     <!-- Item combat -->
     <dimen name="item_combat_height">50dp</dimen>
